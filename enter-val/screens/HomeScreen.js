@@ -16,6 +16,19 @@ export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
+  state = {
+    quotes,
+    curTime: null,
+  }
+
+
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        curTime: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      })
+    }, 1000)
+  }
 
   render() {
     return (
@@ -35,7 +48,7 @@ export default class HomeScreen extends React.Component {
           <View style={styles.getStartedContainer}>
             {this._maybeRenderDevelopmentModeWarning()}
 
-            <Text style={styles.getStartedText}>Get started by saying hello</Text>
+            <Text style={styles.getStartedText}>{this.state.curTime}</Text>
 
             <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
               <Text style={styles.codeHighlightText}>screens/HomeScreen.js</Text>
