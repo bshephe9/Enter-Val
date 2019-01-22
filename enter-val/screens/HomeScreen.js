@@ -10,24 +10,34 @@ import {
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
-//import { MonoText } from '../components/StyledText';
+// import { MonoText } from '../components/StyledText';
+import quotes from '../quotes.json';
+import shuffle from "shuffle-array";
+// import { randomBytes } from 'crypto';
+// import { Quote } from '../components/HomeStuff'
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
+
   state = {
     quotes,
     curTime: null,
+    curDate: null
   }
-
 
   componentDidMount() {
     setInterval(() => {
       this.setState({
-        curTime: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        curTime: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        curDate: new Date().toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })
       })
     }, 1000)
+  }
+  grabQuote = () => {
+    const randomQuote = shuffle(quotes);
+    return randomQuote[1].quote;
   }
 
   render() {
@@ -46,32 +56,23 @@ export default class HomeScreen extends React.Component {
           </View>
 
           <View style={styles.getStartedContainer}>
-            {this._maybeRenderDevelopmentModeWarning()}
 
-            <Text style={styles.getStartedText}>{this.state.curTime}</Text>
-
-            <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-              <Text style={styles.codeHighlightText}>screens/HomeScreen.js</Text>
-            </View>
-
-            <Text style={styles.getStartedText}>
-              Change this text and your app will automatically reload.
-            </Text>
-          </View>
-
-          <View style={styles.helpContainer}>
-            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
-            </TouchableOpacity>
+            <Text style={styles.getStartedText}> {this.state.curTime}</Text>
+            <Text style={styles.getStartedText}> {this.state.curDate}</Text>
+            {/* {this.state.quotes.map(quote => ( */}
+              <Text key={quotes[0].id}>{quotes[0].quote}</Text>
+              {/* // <Quote style={styles.getStartedText} key={quote.id} grabQuote={this.grabQuote}> </Quote> */}
+            {/* // ))} */}
+            
           </View>
         </ScrollView>
 
         <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
+          <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in: HELLO WORLD!</Text>
 
-          <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-            <Text style={styles.codeHighlightText}>navigation/MainTabNavigator.js</Text>
-          </View>
+          {/* <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
+            <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
+          </View> */}
         </View>
       </View>
     );
