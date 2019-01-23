@@ -7,8 +7,10 @@ What makes our app much more unique?
 We help keep track of just how much time you've spent/lost for every activity and for every day needs.
 Through our system, we want to encourage our users to maximize their time and to give our users positive feedback whenever they accomplished their goal and minutes to spare!
 So come and Enter-Val our App Family!
-## Screenshots: 
-[insert photos here]
+
+<!-- ## Screenshots: 
+[insert photos here] -->
+
 ##  Requirements for users:
 Currently only available for the iOS.
 (Will be available on the apple app store!)
@@ -33,10 +35,10 @@ Run with:
 [![js-standard-style](https://img.shields.io/badge/code%20style-eslint-brightgreen.svg?style=flat)](https://github.com/eslint/eslint)
 ---
 ## Current Developers: 
-[Brooke Shepherd](https://github.com/bshephe9)
-[Veronica Lozada](https://github.com/verolozada)
-[Andres Inciarte](https://github.com/andresnew00)
-[Bradley Driver](https://github.com/edriver4)
+- Brooke Shepherd [Github](https://github.com/bshephe9)
+- Veronica Lozada [Github](https://github.com/verolozada)
+- Andres Inciarte [Github](https://github.com/andresnew00)
+- Bradley Driver [Github](https://github.com/edriver4)
 ---
 ## Tech/Framework Used:
 Built with [React-Native](https://facebook.github.io/react-native/) via Expo. 
@@ -45,9 +47,3 @@ Database with [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb
 Authentication with [Auto0](https://auth0.com/)
 ## Want to Contribute?
 Let us know if you want to contribute and please star and fork if this project interests you!
-
-##Authors
-Veronica Lozada  - [Github Repo](https://github.com/verolozada)
-Brooke Shepherd - [Github Repo](https://github.com/bshephe9)
-Bradley Driver - [Github Repo](https://github.com/edriver4)
-Andres Inciarte - [Github Repo](https://github.com/andresnew00)
