@@ -15,9 +15,7 @@ class LinksScreen extends React.Component {
     title: 'Links',
   };
 
-
-  submit = event => {
-    event.preventDefault();
+  submit = () => {
     console.log(`The title of the note is: ${this.state.name} \n 
     and the body is: ${this.state.body}`);
     this.setState({ name: "", body: "" });
@@ -45,11 +43,10 @@ class LinksScreen extends React.Component {
           <FormInput value={this.state.body} onChangeText={this.changeBody}></FormInput>
           <Button title="Submit" onPress={this.submit} />
         </View>
-        
       </ScrollView>
     );
-  }
-}
+  };
+};
 
 const styles = StyleSheet.create({
   container: {
