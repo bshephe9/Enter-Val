@@ -22,11 +22,11 @@ Download with:
  2) [Expo-Cli](https://docs.expo.io/versions/latest/introduction/installation/)
  3) [Xcode for Mac](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
  
-Run with: 
-    1 ) cd enter-val
-    2) yarn add
-    3 ) yarn start
-    4 ) Either type *i* into the console or click on iOS simulator. 
+Run with:   
+    1 ) cd enter-val  
+    2) yarn add  
+    3 ) yarn start    
+    4 ) Either type *i* into the console or click on iOS simulator.     
  
  ---
 ## Code Style:
@@ -41,9 +41,9 @@ Run with:
 - Bradley Driver [Github](https://github.com/edriver4)
 ---
 ## Tech/Framework Used:
-Built with [React-Native](https://facebook.github.io/react-native/) via Expo. 
-Stylized with [Material-UI](https://material-ui.com/)
-Database with [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
-Authentication with [Auto0](https://auth0.com/)
+Built with [React-Native](https://facebook.github.io/react-native/) via Expo.   
+Stylized with [Material-UI](https://material-ui.com/)   
+Database with [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)  
+Authentication with [Auto0](https://auth0.com/)  
 ## Want to Contribute?
 Let us know if you want to contribute and please star and fork if this project interests you!
