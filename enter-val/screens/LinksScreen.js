@@ -1,14 +1,15 @@
 import React from 'react';
-import { ScrollView, StyleSheet, TextInput, Button, Form } from 'react-native';
+import { ScrollView, StyleSheet, Text, Button, View } from 'react-native';
 // import { ExpoLinksView } from '@expo/samples';
-import { FormLabel, FormInput, FormValidationMessage, Input } from 'react-native-elements'
+import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 
 
 
 export default class LinksScreen extends React.Component {
 
   state = {
-    name: ""
+    name: "",
+    body: ""
   }
   static navigationOptions = {
     title: 'Links',
@@ -17,23 +18,33 @@ export default class LinksScreen extends React.Component {
 
   submit = event => {
     event.preventDefault();
-    console.log(`The title of the note is: ${this.state.name}`);
-    this.setState({ name: "" });
+    console.log(`The title of the note is: ${this.state.name} \n 
+    and the body is: ${this.state.body}`);
+    this.setState({ name: "" , body:""});
   }
 
-  change = event => {
-    console.log(event);
-    this.setState({name: event})
+  changeName = event => {
+    this.setState({ name: event });
+  };
+  changeBody = event => {
+    this.setState({ body: event });
   };
 
   render() {
     return (
       <ScrollView>
-        <FormLabel>Title</FormLabel>
-        <FormInput value={this.state.name} onChangeText={this.change}></FormInput>
-        {/* <Input value={this.state.name} onChangeText={name => this.updateValue({name})}/> */}
-        <FormValidationMessage>{'Field required'}</FormValidationMessage>
-        <Button title="Submit" onPress={this.submit} />
+        <Text>New Note</Text>
+        <View>
+          <FormLabel>Title</FormLabel>
+          <FormInput value={this.state.name} onChangeText={this.changeName}></FormInput>
+          {/* <FormValidationMessage>{'Field required'}</FormValidationMessage> */}
+        </View>
+        
+        <View>
+          <FormLabel>Body</FormLabel>
+          <FormInput value={this.state.body} onChangeText={this.changeBody}></FormInput>
+          <Button title="Submit" onPress={this.submit} />
+        </View>
       </ScrollView>
     );
   }
