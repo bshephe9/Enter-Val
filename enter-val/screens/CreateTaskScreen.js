@@ -8,7 +8,7 @@ import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elemen
 class LinksScreen extends React.Component {
 
   state = {
-    name: "",
+    task: "",
     body: ""
   }
   static navigationOptions = {
@@ -18,14 +18,14 @@ class LinksScreen extends React.Component {
 
   submit = event => {
     event.preventDefault();
-    console.log(`The title of the note is: ${this.state.name} \n 
+    console.log(`The title of the note is: ${this.state.task} \n 
     and the body is: ${this.state.body}`);
-    this.setState({ name: "", body: "" });
+    this.setState({ task: "", body: "" });
     alert("Note added!")
   }
 
   changeName = event => {
-    this.setState({ name: event });
+    this.setState({ task: event });
   };
   changeBody = event => {
     this.setState({ body: event });
@@ -35,8 +35,8 @@ class LinksScreen extends React.Component {
     return (
       <ScrollView>
         <View>
-          <FormLabel>Title</FormLabel>
-          <FormInput value={this.state.name} onChangeText={this.changeName}></FormInput>
+          <FormLabel>Task</FormLabel>
+          <FormInput value={this.state.task} onChangeText={this.changeName}></FormInput>
           <FormValidationMessage>{'Field required'}</FormValidationMessage>
         </View>
 

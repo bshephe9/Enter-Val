@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
-import LinkScreen from "./LinksScreen"
+// import LinkScreen from "./LinksScreen"
 
 // import { MonoText } from '../components/StyledText';
 import quotes from '../quotes.json';
@@ -67,7 +67,7 @@ export default class HomeScreen extends React.Component {
             
           </View>
         </ScrollView>
-        <Text>HELLO</Text>
+
         <View style={styles.tabBarInfoContainer}>
           <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in: HELLO WORLD!</Text>
 
