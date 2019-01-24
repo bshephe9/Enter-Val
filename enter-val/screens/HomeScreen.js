@@ -42,9 +42,14 @@ export default class HomeScreen extends React.Component {
           <View>
             <Text style={styles.timer}>{this.state.curTime}</Text>
           </View>
+
+          <View>
+            <Text style={styles.content}>"Keep going. Be all in."</Text>
+          </View>
+
           <View>
             <Button
-              style={{ fontSize: 20, color: '#fff', marginTop: 255, borderColor: '#fa8072', backgroundColor: '#fa8072', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden' }}
+              style={{ fontSize: 20, color: '#fff', marginTop: 275, borderColor: '#fa8072', backgroundColor: '#fa8072', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden' }}
               styleDisabled={{ color: 'red' }}
               onPress={() => this.doSomething()}>
               get started
@@ -66,7 +71,7 @@ const styles = StyleSheet.create({
   overlayContainer: {
     alignItems: 'center',
     color: 'black',
-    marginTop: 120,
+    marginTop: 15,
   },
   header: {
     fontSize: 35,
@@ -81,6 +86,11 @@ const styles = StyleSheet.create({
   timer: {
     color: '#fff',
     fontSize: 25,
-    marginTop: 20,
+    marginTop: 15,
+    marginBottom: 10
+  }, 
+  content: { 
+    fontSize: 15, 
+    fontStyle: 'italic'
   }
 });
