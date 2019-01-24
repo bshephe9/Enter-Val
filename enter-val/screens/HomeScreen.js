@@ -64,7 +64,7 @@ export default class HomeScreen extends React.Component {
               <Text key={quotes[0].id}>{quotes[0].quote}</Text>
               {/* // <Quote style={styles.getStartedText} key={quote.id} grabQuote={this.grabQuote}> </Quote> */}
             {/* // ))} */}
-            
+  
           </View>
         </ScrollView>
 
