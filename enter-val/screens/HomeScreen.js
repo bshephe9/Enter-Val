@@ -10,6 +10,21 @@ import Button from 'react-native-button';
 
 
 export default class HomeScreen extends React.Component {
+
+  state = {
+    curTime: null,
+    curDate: null
+  }
+
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        curTime: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        curDate: new Date().toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })
+      })
+    }, 1000)
+  }
+
   render() {
     return (
       <ImageBackground
@@ -17,13 +32,15 @@ export default class HomeScreen extends React.Component {
         style={styles.container}>
 
         <View style={styles.overlayContainer}>
-
+          <View>
+            <Text style={styles.timer}>{this.state.curDate}</Text>
+          </View>
           <View>
             <Text style={styles.header}>enterVal</Text>
           </View>
 
           <View>
-            <Text style={styles.timer}>9:30 am</Text>
+            <Text style={styles.timer}>{this.state.curTime}</Text>
           </View>
           <View>
             <Button
