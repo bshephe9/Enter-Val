@@ -49,7 +49,7 @@ export default class HomeScreen extends React.Component {
 
           <View>
             <Button
-              style={{ fontSize: 20, color: '#fff', marginTop: 275, borderColor: '#fa8072', backgroundColor: '#fa8072', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden' }}
+              style={{ fontSize: 20, color: '#fff', marginTop: 400, borderColor: '#fa8072', backgroundColor: '#fa8072', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden' }}
               styleDisabled={{ color: 'red' }}
               onPress={() => this.doSomething()}>
               get started
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   overlayContainer: {
     alignItems: 'center',
     color: 'black',
-    marginTop: 15,
+    marginTop: 50,
   },
   header: {
     fontSize: 35,
