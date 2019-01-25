@@ -2,6 +2,7 @@ import React from 'react';
 import {
 View, 
 StyleSheet, 
+Text
 } from 'react-native';
 
 
@@ -10,7 +11,7 @@ export default class LoginScreen extends React.Component {
         return (
 
             <View style={styles.container}>
-                <Text>Simple Login will Go Here</Text>
+                <Text styles={styles.text}>Simple Login will Go Here</Text>
             </View>
         )
     }
@@ -19,6 +20,11 @@ export default class LoginScreen extends React.Component {
 const styles = StyleSheet.create({
     container: { 
         backgroundColor: '#fff', 
-        alignContent: 'center'
+        alignContent: 'center',
+    }, 
+    text: { 
+        fontWeight: 'bold', 
+        fontSize: 35,
+        alignItems: 'center',
     }
 });

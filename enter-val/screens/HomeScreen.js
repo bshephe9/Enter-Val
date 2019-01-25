@@ -7,8 +7,6 @@ import {
 } from 'react-native';
 import Button from 'react-native-button';
 
-
-
 export default class HomeScreen extends React.Component {
 
   state = {
