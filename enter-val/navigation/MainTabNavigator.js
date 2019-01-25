@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import UserScreen from '../screens/UserScreen';
 import LoginScreen from '../screens/LoginScreen';
+import FormsScreen from '../screens/FormsScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -41,6 +42,25 @@ LoginStack.navigationOptions = {
       }
     />
   ),
+}; 
+
+const FormsStack = createStackNavigator({
+  User: FormsScreen,
+});
+
+
+FormsStack.navigationOptions = {
+  tabBarLabel: 'New Note',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-information-circle${focused ? '' : '-outline'}`
+          : 'md-information-circle'
+      }
+    />
+  ),
 };
 
 const UserStack = createStackNavigator({
@@ -60,5 +80,6 @@ UserStack.navigationOptions = {
 export default createBottomTabNavigator({
   HomeStack,
   LoginStack,
+  FormsStack,
   UserStack,
 });
