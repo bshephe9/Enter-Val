@@ -5,7 +5,8 @@ import { Card, Text } from "react-native-elements";
 export default ({ navigation }) => (
 
   <ScrollView style={{ paddingVertical: 20 }}>
-    <Card title="John Doe">
+
+    <Card title="8:00 - 11:00 AM">
       <View
         style={{
           backgroundColor: "#bcbec1",
@@ -22,7 +23,7 @@ export default ({ navigation }) => (
       </View>
     </Card>
 
-    <Card title="John Doe">
+    <Card title="11:00 - 2:00 PM">
       <View
         style={{
           backgroundColor: "#bcbec1",
@@ -39,7 +40,7 @@ export default ({ navigation }) => (
       </View>
     </Card>
 
-    <Card title="John Doe">
+    <Card title="2:00 - 6:00 PM">
       <View
         style={{
           backgroundColor: "#bcbec1",
@@ -56,7 +57,7 @@ export default ({ navigation }) => (
       </View>
     </Card>
 
-    <Card title="John Doe">
+    <Card title="6:00 - 10:00 PM">
       <View
         style={{
           backgroundColor: "#bcbec1",
