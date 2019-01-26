@@ -1,7 +1,8 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, Button, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 // import { ExpoLinksView } from '@expo/samples';
-import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
+import { FormLabel, FormInput } from 'react-native-elements'
+import Button from 'react-native-button';
 import moment from 'moment'
 
 
@@ -66,7 +67,11 @@ class LinksScreen extends React.Component {
         <View>
           <FormLabel>Body</FormLabel>
           <FormInput value={this.state.body} onChangeText={this.changeBody}></FormInput>
-          <Button title="Submit" onPress={this.submit} />
+          <Button
+            style={{ fontSize: 20, color: '#fff', marginTop: 80, borderColor: '#fa8072', backgroundColor: '#fa8072', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden' }}
+            styleDisabled={{ color: 'red' }}>
+            submit
+            </Button>
         </View>
       </ScrollView>
     );
