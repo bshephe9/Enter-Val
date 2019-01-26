@@ -7,8 +7,6 @@ import {
 } from 'react-native';
 import Button from 'react-native-button';
 
-
-
 export default class HomeScreen extends React.Component {
 
   state = {
@@ -51,7 +49,7 @@ export default class HomeScreen extends React.Component {
             <Button
               style={{ fontSize: 20, color: '#fff', marginTop: 275, borderColor: '#fa8072', backgroundColor: '#fa8072', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden' }}
               styleDisabled={{ color: 'red' }}
-              onPress={() => this.doSomething()}>
+              onPress={() => this.props.navigation.navigate('SettingsScreen')}>
               get started
             </Button>
           </View>
@@ -88,9 +86,9 @@ const styles = StyleSheet.create({
     fontSize: 25,
     marginTop: 15,
     marginBottom: 10
-  }, 
-  content: { 
-    fontSize: 15, 
+  },
+  content: {
+    fontSize: 15,
     fontStyle: 'italic'
   }
 });
