@@ -10,7 +10,6 @@ import HomeScreen from './screens/HomeScreen';
 import SettingsScreen from './screens/SettingsScreen'
 import UserScreen from './screens/UserScreen';
 
-
 //!! this renders new screens for them to be used in the app
 const AppNavigator = createStackNavigator({
   HomeScreen: { screen: HomeScreen },
