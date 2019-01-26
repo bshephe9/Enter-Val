@@ -1,44 +1,25 @@
-import React from 'react';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  Text,
-  View,
-} from 'react-native';
+import React from "react";
+import { View } from "react-native";
+import { Card, Text } from "react-native-elements";
 
-export default class UserScreen extends React.Component {
-  render() {
-    return (
 
-      <View style={styles.container}>
-        <TouchableOpacity style={styles.card}>
-          <Text style={styles.cardText}>
-            Card Title
-            </Text>
-        </TouchableOpacity>
+export default ({ navigation }) => (
+  <View style={{ paddingVertical: 20 }}>
+    <Card title="John Doe">
+      <View
+        style={{
+          backgroundColor: "#bcbec1",
+          alignItems: "center",
+          justifyContent: "center",
+          width: 80,
+          height: 80,
+          borderRadius: 40,
+          alignSelf: "center",
+          marginBottom: 20
+        }}
+      >
+        <Text style={{ color: "white", fontSize: 28 }}>JD</Text>
       </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 20,
-    backgroundColor: '#F5FCFF',
-  },
-  card: {
-    backgroundColor: 'transparent',
-    marginBottom: 10,
-    marginLeft: '2%',
-    width: '96%',
-    height: 150,
-    shadowColor: '#000',
-    shadowRadius: 1,
-    alignItems: 'center',
-  },
-  cardText: {
-    padding: 10,  
-    fontSize: 20,
-    fontWeight: 'bold',
-  }
-});
+    </Card>
+  </View>
+);
