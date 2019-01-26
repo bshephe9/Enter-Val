@@ -1,8 +1,15 @@
-import React from "react";
-import { View, ScrollView } from "react-native";
-import { Card, Text } from "react-native-elements";
+import React from 'react';
+import {
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+  Text,
+  View,
+} from 'react-native';
 
-export default ({ navigation }) => (
+export default class UserScreen extends React.Component {
+  render() {
+    return (
 
   <ScrollView style={{ paddingVertical: 20 }}>
 
@@ -21,7 +28,9 @@ export default ({ navigation }) => (
       >
         <Text style={{ color: "white", fontSize: 28 }}>JD</Text>
       </View>
-    </Card>
+    );
+  }
+}
 
     <Card title="11:00 - 2:00 PM">
       <View
