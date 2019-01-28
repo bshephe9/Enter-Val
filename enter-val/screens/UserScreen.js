@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  StyleSheet,
   ScrollView,
   Text,
   View,
@@ -85,15 +84,16 @@ export default class UserScreen extends React.Component {
           </View>
         </Card>
 
-    
-        <FloatingAction style={styles}
-          actions={actions}
-          onPressItem={
-            (name) => {
-              console.log(`selected button: ${name}`);
+        <View>
+          <FloatingAction 
+            actions={actions}
+            onPressItem={
+              (name) => {
+                console.log(`selected button: ${name}`);
+              }
             }
-          }
-        />
+          />
+        </View>
 
       </ScrollView>
     );
@@ -102,29 +102,18 @@ export default class UserScreen extends React.Component {
 
 const actions = [{
   text: 'Home',
-  name: 'bt_accessibility',
+  name: 'bt_home',
   position: 1
 }, {
-  text: 'Add a Task',
-  name: 'bt_language',
+  text: 'Tasks',
+  name: 'bt_task',
   position: 2
 }, {
   text: 'Notes',
-  name: 'bt_room',
+  name: 'bt_notes',
   position: 3
 }, {
   text: 'Log Out',
-  name: 'bt_videocam',
+  name: 'bt_logout',
   position: 4
 }];
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-  },
-  button: { 
-    color: '#fa8072'
-  }
-});
