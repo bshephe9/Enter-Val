@@ -11,6 +11,7 @@ import {
 import { FloatingAction } from 'react-native-floating-action';
 
 
+
 export default class UserScreen extends React.Component {
   render() {
     return (
@@ -85,7 +86,7 @@ export default class UserScreen extends React.Component {
         </Card>
 
     
-        <FloatingAction style={{ backgroundColor: '#fa8072' }}
+        <FloatingAction style={styles}
           actions={actions}
           onPressItem={
             (name) => {
