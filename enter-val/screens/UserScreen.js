@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   StyleSheet,
-  TouchableOpacity,
   ScrollView,
   Text,
   View,
@@ -9,7 +8,7 @@ import {
 import {
   Card
 } from 'react-native-elements';
-
+import { FloatingAction } from 'react-native-floating-action';
 
 
 export default class UserScreen extends React.Component {
@@ -84,7 +83,47 @@ export default class UserScreen extends React.Component {
             <Text style={{ color: 'white', fontSize: 28 }}>JD</Text>
           </View>
         </Card>
+
+    
+        <FloatingAction style={{ backgroundColor: '#fa8072' }}
+          actions={actions}
+          onPressItem={
+            (name) => {
+              console.log(`selected button: ${name}`);
+            }
+          }
+        />
+
       </ScrollView>
     );
   }
 }
+
+const actions = [{
+  text: 'Home',
+  name: 'bt_accessibility',
+  position: 1
+}, {
+  text: 'Add a Task',
+  name: 'bt_language',
+  position: 2
+}, {
+  text: 'Notes',
+  name: 'bt_room',
+  position: 3
+}, {
+  text: 'Log Out',
+  name: 'bt_videocam',
+  position: 4
+}];
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
+  button: { 
+    color: '#fa8072'
+  }
+});
