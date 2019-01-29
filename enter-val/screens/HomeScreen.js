@@ -47,8 +47,7 @@ export default class HomeScreen extends React.Component {
 
           <View>
             <Button
-              style={{ fontSize: 20, color: '#fff', marginTop: 275, borderColor: '#fa8072', backgroundColor: '#fa8072', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden' }}
-              styleDisabled={{ color: 'red' }}
+              style={{ fontSize: 20, color: '#fff', marginTop: 300, borderColor: '#fa8072', backgroundColor: '#fa8072', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden' }}
               onPress={() => this.props.navigation.navigate('SettingsScreen')}>
               get started
             </Button>
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     height: '100%',
-  },
+},
   overlayContainer: {
     alignItems: 'center',
     color: 'black',
