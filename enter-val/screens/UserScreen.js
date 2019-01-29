@@ -85,11 +85,11 @@ export default class UserScreen extends React.Component {
         </Card>
 
         <View>
-          <FloatingAction 
+          <FloatingAction style={{ backgroundColor:  '#fa8072' }}
             actions={actions}
             onPressItem={
               (name) => {
-                console.log(`selected button: ${name}`);
+                this.props.navigation.navigate('HomeScreen');
               }
             }
           />
