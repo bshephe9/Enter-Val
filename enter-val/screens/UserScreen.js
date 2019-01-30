@@ -1,77 +1,119 @@
 import React from 'react';
 import {
-  StyleSheet,
+  ScrollView,
   Text,
   View,
-  ImageBackground,
 } from 'react-native';
+import {
+  Card
+} from 'react-native-elements';
+import { FloatingAction } from 'react-native-floating-action';
 
-render() {
-  return (
-    <ImageBackground
-      source={require('../assets/images/bg.jpg')}
-      style={styles.container}>
 
-      <View style={styles.overlayContainer}>
+
+export default class UserScreen extends React.Component {
+  render() {
+    return (
+
+      <ScrollView style={{ paddingVertical: 20 }}>
+
+        <Card title='8:00 - 11:00 AM'>
+          <View
+            style={{
+              backgroundColor: '#bcbec1',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 80,
+              height: 80,
+              borderRadius: 40,
+              alignSelf: 'center',
+              marginBottom: 20
+            }}
+          >
+            <Text style={{ color: 'white', fontSize: 28 }}>JD</Text>
+          </View>
+        </Card>
+        <Card title='11:00 - 2:00 PM'>
+          <View
+            style={{
+              backgroundColor: '#bcbec1',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 80,
+              height: 80,
+              borderRadius: 40,
+              alignSelf: 'center',
+              marginBottom: 20
+            }}
+          >
+            <Text style={{ color: 'white', fontSize: 28 }}>JD</Text>
+          </View>
+        </Card>
+
+        <Card title='2:00 - 6:00 PM'>
+          <View
+            style={{
+              backgroundColor: '#bcbec1',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 80,
+              height: 80,
+              borderRadius: 40,
+              alignSelf: 'center',
+              marginBottom: 20
+            }}
+          >
+            <Text style={{ color: 'white', fontSize: 28 }}>JD</Text>
+          </View>
+        </Card>
+
+        <Card title='6:00 - 10:00 PM'>
+          <View
+            style={{
+              backgroundColor: '#bcbec1',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 80,
+              height: 80,
+              borderRadius: 40,
+              alignSelf: 'center',
+              marginBottom: 20
+            }}
+          >
+            <Text style={{ color: 'white', fontSize: 28 }}>JD</Text>
+          </View>
+        </Card>
+
         <View>
-          <Text style={styles.timer}>{this.state.curDate}</Text>
-        </View>
-        <View>
-          <Text style={styles.header}>enterVal</Text>
-        </View>
-
-        <View>
-          <Text style={styles.timer}>{this.state.curTime}</Text>
-        </View>
-
-        <View>
-          <Text style={styles.content}>"Keep going. Be all in."</Text>
+          <FloatingAction 
+            actions={actions}
+            onPressItem={
+              (name) => {
+                this.props.navigation.navigate('HomeScreen');
+              }
+            }
+          />
         </View>
 
-        <View>
-
-          <Button
-            style={{ fontSize: 20, color: '#fff', marginTop: 300, borderColor: '#fa8072', backgroundColor: '#fa8072', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden' }}
-            onPress={() => this.props.navigation.navigate('SettingsScreen')}>
-            get started
-          </Button>
-        </View>
-      </View>
-
-    </ImageBackground>
-  );
+      </ScrollView>
+    );
+  }
 }
-}
 
-const styles = StyleSheet.create({
-container: {
-  flex: 1,
-  width: '100%',
-  height: '100%',
-},
-overlayContainer: {
-  alignItems: 'center',
-  color: 'black',
-  marginTop: 15,
-},
-header: {
-  fontSize: 35,
-  borderColor: '#fff',
-  fontWeight: 'bold',
-  color: '#fff',
-  borderWidth: 2,
-  padding: 20,
-  paddingLeft: 40,
-  paddingRight: 40,
-},
-timer: {
-  color: '#fff',
-  fontSize: 25,
-  marginTop: 10,
-  marginBottom: 10
-},
-content: {
-  fontSize: 15,
-  fontStyle: 'italic'
-}
-});
+const actions = [{
+  text: 'Home',
+  name: 'bt_home',
+  position: 1
+}, {
+  text: 'Tasks',
+  name: 'bt_task',
+  position: 2
+}, {
+  text: 'Notes',
+  name: 'bt_notes',
+  position: 3
+}, {
+  text: 'Log Out',
+  name: 'bt_logout',
+  position: 4
+}];
