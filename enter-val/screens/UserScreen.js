@@ -10,7 +10,6 @@ import {
 import { FloatingAction } from 'react-native-floating-action';
 
 
-
 export default class UserScreen extends React.Component {
   render() {
     return (
@@ -87,11 +86,7 @@ export default class UserScreen extends React.Component {
         <View>
           <FloatingAction 
             actions={actions}
-            onPressItem={
-              (name) => {
-                console.log(`selected button: ${name}`);
-              }
-            }
+            onPressItem={() => this.props.navigation.navigate('SettingsScreen')}
           />
         </View>
 
@@ -104,6 +99,7 @@ const actions = [{
   text: 'Home',
   name: 'bt_home',
   position: 1,
+  location: 'HomeScreen'
 }, {
   text: 'Tasks',
   name: 'bt_task',
