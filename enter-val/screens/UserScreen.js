@@ -94,7 +94,7 @@ export default class UserScreen extends React.Component {
                 <Icon name="md-create" style={styles.actionButtonIcon} />
               </ActionButton.Item>
               <ActionButton.Item buttonColor='#3498db' title="Home" onPress={() => { }}>
-                <Icon name="md-notifications-off" style={styles.actionButtonIcon} />
+                <Icon name="md-home" style={styles.actionButtonIcon} />
               </ActionButton.Item>
               <ActionButton.Item buttonColor='#1abc9c' title="Sign Out" onPress={() => { }}>
                 <Icon name="md-done-all" style={styles.actionButtonIcon} />
