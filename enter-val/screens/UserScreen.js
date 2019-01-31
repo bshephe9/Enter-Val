@@ -23,7 +23,10 @@ export default class UserScreen extends React.Component {
               width: 80,
               height: 80,
               borderRadius: 40,
-              marginBottom: 20
+              marginBottom: 20,
+              alignSelf: 'center',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             <Text style={styles.text}>
@@ -67,29 +70,10 @@ export default class UserScreen extends React.Component {
           </View>
         </Card>
 
-        <Card title='6:00 - 10:00 PM'>
-          <View
-            style={{
-
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: 80,
-              height: 80,
-              borderRadius: 40,
-              alignSelf: 'center',
-              marginBottom: 20
-            }}
-          >
-            <Text style={styles.text}>
-              Insert
-            </Text>
-          </View>
-        </Card>
-
         <View>
-          <View style={{ flex: 1, backgroundColor: '#f3f3f3', marginBottom: 300, }}>
+          <View style={{ flex: 1, backgroundColor: '#f3f3f3', marginBottom: 300 }}>
             {/* Rest of the app comes ABOVE the action button component !*/}
-            <ActionButton buttonColor='#fa8072'>
+            <ActionButton buttonColor='#556b2f'>
 
               {/* New Task Button */}
               <ActionButton.Item buttonColor='#556b2f' title="New Task" onPress={() => console.log("notes tapped!")}>
