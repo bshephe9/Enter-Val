@@ -25,9 +25,11 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <ImageBackground
-        source={require('../assets/images/bg.jpg')}
-        style={styles.container}>
+      <ImageBackground style={{
+        flex: 1,
+        resizeMode: 'cover',
+        }}
+        source={require('../assets/images/bg.jpg')}>
 
         <View style={styles.overlayContainer}>
           <View>
@@ -53,22 +55,16 @@ export default class HomeScreen extends React.Component {
             </Button>
           </View>
         </View>
-
       </ImageBackground>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-},
   overlayContainer: {
     alignItems: 'center',
     color: 'black',
-    marginTop:15,
+    marginTop: 15,
   },
   header: {
     fontSize: 35,

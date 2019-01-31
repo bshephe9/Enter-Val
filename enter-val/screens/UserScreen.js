@@ -3,13 +3,13 @@ import {
   ScrollView,
   Text,
   View,
+  StyleSheet
 } from 'react-native';
 import {
   Card
 } from 'react-native-elements';
-import { FloatingAction } from 'react-native-floating-action';
-
-
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class UserScreen extends React.Component {
   render() {
@@ -20,23 +20,20 @@ export default class UserScreen extends React.Component {
         <Card title='8:00 - 11:00 AM'>
           <View
             style={{
-              backgroundColor: '#bcbec1',
-              alignItems: 'center',
-              justifyContent: 'center',
               width: 80,
               height: 80,
               borderRadius: 40,
-              alignSelf: 'center',
               marginBottom: 20
             }}
           >
-            <Text style={{ color: 'white', fontSize: 28 }}>JD</Text>
+            <Text style={styles.text}>
+              Insert
+            </Text>
           </View>
         </Card>
         <Card title='11:00 - 2:00 PM'>
           <View
             style={{
-              backgroundColor: '#bcbec1',
               alignItems: 'center',
               justifyContent: 'center',
               width: 80,
@@ -46,14 +43,15 @@ export default class UserScreen extends React.Component {
               marginBottom: 20
             }}
           >
-            <Text style={{ color: 'white', fontSize: 28 }}>JD</Text>
+            <Text style={styles.text}>
+              Insert
+            </Text>
           </View>
         </Card>
 
         <Card title='2:00 - 6:00 PM'>
           <View
             style={{
-              backgroundColor: '#bcbec1',
               alignItems: 'center',
               justifyContent: 'center',
               width: 80,
@@ -63,14 +61,16 @@ export default class UserScreen extends React.Component {
               marginBottom: 20
             }}
           >
-            <Text style={{ color: 'white', fontSize: 28 }}>JD</Text>
+            <Text style={styles.text}>
+              Insert
+            </Text>
           </View>
         </Card>
 
         <Card title='6:00 - 10:00 PM'>
           <View
             style={{
-              backgroundColor: '#bcbec1',
+
               alignItems: 'center',
               justifyContent: 'center',
               width: 80,
@@ -80,19 +80,28 @@ export default class UserScreen extends React.Component {
               marginBottom: 20
             }}
           >
-            <Text style={{ color: 'white', fontSize: 28 }}>JD</Text>
+            <Text style={styles.text}>
+              Insert
+            </Text>
           </View>
         </Card>
 
         <View>
-          <FloatingAction style={{ backgroundColor:  '#fa8072' }}
-            actions={actions}
-            onPressItem={
-              (name) => {
-                this.props.navigation.navigate('HomeScreen');
-              }
-            }
-          />
+          <View style={{ flex: 1, backgroundColor: '#f3f3f3', marginBottom: 300, }}>
+            {/* Rest of the app comes ABOVE the action button component !*/}
+            <ActionButton buttonColor="rgba(231,76,60,1)">
+              <ActionButton.Item buttonColor='#9b59b6' title="New Task" onPress={() => console.log("notes tapped!")}>
+                <Icon name="md-create" style={styles.actionButtonIcon} />
+              </ActionButton.Item>
+              <ActionButton.Item buttonColor='#3498db' title="Home" onPress={() => { }}>
+                <Icon name="md-notifications-off" style={styles.actionButtonIcon} />
+              </ActionButton.Item>
+              <ActionButton.Item buttonColor='#1abc9c' title="Sign Out" onPress={() => { }}>
+                <Icon name="md-done-all" style={styles.actionButtonIcon} />
+              </ActionButton.Item>
+            </ActionButton>
+          </View>
+
         </View>
 
       </ScrollView>
@@ -100,20 +109,14 @@ export default class UserScreen extends React.Component {
   }
 }
 
-const actions = [{
-  text: 'Home',
-  name: 'bt_home',
-  position: 1
-}, {
-  text: 'Tasks',
-  name: 'bt_task',
-  position: 2
-}, {
-  text: 'Notes',
-  name: 'bt_notes',
-  position: 3
-}, {
-  text: 'Log Out',
-  name: 'bt_logout',
-  position: 4
-}];
+const styles = StyleSheet.create({
+  text: {
+    textAlign: 'center',
+    fontSize: 20
+  },
+  actionButtonIcon: { 
+    fontSize: 20, 
+    height: 22, 
+    color: 'white',
+  },
+});
