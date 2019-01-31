@@ -11,9 +11,9 @@ import {
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-export default class UserScreen extends React.Component {
-  render() {
-    return (
+  export default class UserScreen extends React.Component {
+    render() {
+      return (
 
       <ScrollView style={{ paddingVertical: 20, marginTop: 15}}>
 
@@ -57,7 +57,7 @@ export default class UserScreen extends React.Component {
             </Text>
           </View>
         </Card>
-
+{/* 
         <Card title='2:00 - 6:00 PM'>
           <View
             style={{
@@ -74,7 +74,7 @@ export default class UserScreen extends React.Component {
               Insert
             </Text>
           </View>
-        </Card>
+        </Card> */}
 
         <View>
           <View style={{ flex: 1, backgroundColor: '#f3f3f3'}}>
@@ -82,17 +82,19 @@ export default class UserScreen extends React.Component {
             <ActionButton buttonColor='#1e90ff'>
 
               {/* New Task Button */}
-              <ActionButton.Item buttonColor='#1e90ff' title="New Task" onPress={() => console.log("notes tapped!")}>
+              <ActionButton.Item buttonColor='#1e90ff' title="New Task" onPress={() => this.props.navigation.navigate('CreateTask')}>
                 <Icon name="md-create" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Home Button */}
-              <ActionButton.Item buttonColor='#1e90ff' title="Home" onPress={() => { }}>
+                <ActionButton.Item buttonColor='#1e90ff' title="Home" onPress={() => this.props.navigation.navigate('HomeScreen')}>
                 <Icon name="md-home" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Sign Out Button */}
-              <ActionButton.Item buttonColor='#1e90ff' title="Sign Out" onPress={() => { }}>
+              <ActionButton.Item buttonColor='#1e90ff' title="Sign Out" 
+              //?? in here we have to add code for loging out if thats the purpose of this button!
+              onPress={() => this.props.navigation.navigate('HomeScreen')}>
                 <Icon name="md-done-all" style={styles.actionButtonIcon} />
               </ActionButton.Item>
             </ActionButton>
@@ -103,8 +105,7 @@ export default class UserScreen extends React.Component {
       </ScrollView>
     );
   }
-}
-
+  }
 const styles = StyleSheet.create({
   text: {
     fontSize: 20,
