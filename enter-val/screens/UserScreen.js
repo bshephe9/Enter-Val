@@ -44,7 +44,7 @@ export default class UserScreen extends React.Component {
             }}
           >
             <Text style={styles.text}>
-              Insert
+                      Insert
             </Text>
           </View>
         </Card>
@@ -89,13 +89,19 @@ export default class UserScreen extends React.Component {
         <View>
           <View style={{ flex: 1, backgroundColor: '#f3f3f3', marginBottom: 300, }}>
             {/* Rest of the app comes ABOVE the action button component !*/}
-            <ActionButton buttonColor="rgba(231,76,60,1)">
+            <ActionButton buttonColor='#fa8072'>
+
+              {/* New Task Button */}
               <ActionButton.Item buttonColor='#9b59b6' title="New Task" onPress={() => console.log("notes tapped!")}>
                 <Icon name="md-create" style={styles.actionButtonIcon} />
               </ActionButton.Item>
-              <ActionButton.Item buttonColor='#3498db' title="Home" onPress={() => { }}>
+
+              {/* Home Button */}
+              <ActionButton.Item buttonColor='#fa8072' title="Home" onPress={() => { }}>
                 <Icon name="md-home" style={styles.actionButtonIcon} />
               </ActionButton.Item>
+
+              {/* Sign Out Button */}
               <ActionButton.Item buttonColor='#1abc9c' title="Sign Out" onPress={() => { }}>
                 <Icon name="md-done-all" style={styles.actionButtonIcon} />
               </ActionButton.Item>
@@ -114,9 +120,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20
   },
-  actionButtonIcon: { 
-    fontSize: 20, 
-    height: 22, 
+  actionButtonIcon: {
+    fontSize: 20,
+    height: 22,
     color: 'white',
   },
 });
