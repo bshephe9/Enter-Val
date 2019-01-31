@@ -9,12 +9,14 @@ import {
 import HomeScreen from './screens/HomeScreen';
 import SettingsScreen from './screens/SettingsScreen'
 import UserScreen from './screens/UserScreen';
+import CreateTask from './screens/CreateTask';
 
 //!! this renders new screens for them to be used in the app
 const AppNavigator = createStackNavigator({
   HomeScreen: { screen: HomeScreen },
   SettingsScreen: { screen: SettingsScreen },
-  UserScreen: { screen: UserScreen }
+  UserScreen: { screen: UserScreen },
+  CreateTask: { screen: CreateTask }
 });
 
 

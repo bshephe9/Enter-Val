@@ -49,7 +49,7 @@ export default class HomeScreen extends React.Component {
 
           <View>
             <Button
-              style={{ fontSize: 20, color: '#fff', marginTop: 300, borderColor: '#fa8072', backgroundColor: '#556b2f', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden' }}
+              style={{ fontSize: 20, color: '#fff', marginTop: 300, borderColor: '#fa8072', backgroundColor: '#556b2f', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden', }}
               onPress={() => this.props.navigation.navigate('SettingsScreen')}>
               get started
             </Button>

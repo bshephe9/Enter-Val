@@ -57,7 +57,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
             </Text>
           </View>
         </Card>
-
+{/* 
         <Card title='2:00 - 6:00 PM'>
           <View
             style={{
@@ -74,7 +74,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
               Insert
             </Text>
           </View>
-        </Card>
+        </Card> */}
 
         <View>
           <View style={{ flex: 1, backgroundColor: '#f3f3f3'}}>
@@ -82,17 +82,19 @@ import Icon from 'react-native-vector-icons/Ionicons';
             <ActionButton buttonColor='#1e90ff'>
 
               {/* New Task Button */}
-              <ActionButton.Item buttonColor='#1e90ff' title="New Task" onPress={() => console.log("notes tapped!")}>
+              <ActionButton.Item buttonColor='#1e90ff' title="New Task" onPress={() => this.props.navigation.navigate('CreateTask')}>
                 <Icon name="md-create" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Home Button */}
-                <ActionButton.Item buttonColor='#1e90ff' title="Home" onPress={() => { }}>
+                <ActionButton.Item buttonColor='#1e90ff' title="Home" onPress={() => this.props.navigation.navigate('HomeScreen')}>
                 <Icon name="md-home" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Sign Out Button */}
-              <ActionButton.Item buttonColor='#1e90ff' title="Sign Out" onPress={() => { }}>
+              <ActionButton.Item buttonColor='#1e90ff' title="Sign Out" 
+              //?? in here we have to add code for loging out if thats the purpose of this button!
+              onPress={() => this.props.navigation.navigate('HomeScreen')}>
                 <Icon name="md-done-all" style={styles.actionButtonIcon} />
               </ActionButton.Item>
             </ActionButton>
@@ -103,7 +105,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
       </ScrollView>
     );
   }
-
+  }
 const styles = StyleSheet.create({
   text: {
     fontSize: 20,
