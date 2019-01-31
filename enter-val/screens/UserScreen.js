@@ -15,7 +15,13 @@ export default class UserScreen extends React.Component {
   render() {
     return (
 
-      <ScrollView style={{ paddingVertical: 20 }}>
+      <ScrollView style={{ paddingVertical: 20, marginTop: 15}}>
+
+      <View> 
+        <Text style={styles.title}>
+          Today
+        </Text>
+      </View>
 
         <Card title='8:00 - 11:00 AM'>
           <View
@@ -71,22 +77,22 @@ export default class UserScreen extends React.Component {
         </Card>
 
         <View>
-          <View style={{ flex: 1, backgroundColor: '#f3f3f3', marginBottom: 300 }}>
+          <View style={{ flex: 1, backgroundColor: '#f3f3f3'}}>
             {/* Rest of the app comes ABOVE the action button component !*/}
-            <ActionButton buttonColor='#556b2f'>
+            <ActionButton buttonColor='#1e90ff'>
 
               {/* New Task Button */}
-              <ActionButton.Item buttonColor='#556b2f' title="New Task" onPress={() => console.log("notes tapped!")}>
+              <ActionButton.Item buttonColor='#1e90ff' title="New Task" onPress={() => console.log("notes tapped!")}>
                 <Icon name="md-create" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Home Button */}
-              <ActionButton.Item buttonColor='#556b2f' title="Home" onPress={() => { }}>
+              <ActionButton.Item buttonColor='#1e90ff' title="Home" onPress={() => { }}>
                 <Icon name="md-home" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Sign Out Button */}
-              <ActionButton.Item buttonColor='#556b2f' title="Sign Out" onPress={() => { }}>
+              <ActionButton.Item buttonColor='#1e90ff' title="Sign Out" onPress={() => { }}>
                 <Icon name="md-done-all" style={styles.actionButtonIcon} />
               </ActionButton.Item>
             </ActionButton>
@@ -101,12 +107,18 @@ export default class UserScreen extends React.Component {
 
 const styles = StyleSheet.create({
   text: {
-    textAlign: 'center',
-    fontSize: 20
+    fontSize: 20,
   },
   actionButtonIcon: {
     fontSize: 20,
     height: 22,
     color: 'white',
+  },
+  title: { 
+    fontWeight: 'bold', 
+    fontSize: 25, 
+    textAlign: 'center',
+    marginBottom: 15,
+    color: '#1e90ff',
   },
 });
