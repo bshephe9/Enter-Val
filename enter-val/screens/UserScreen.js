@@ -92,17 +92,17 @@ export default class UserScreen extends React.Component {
             <ActionButton buttonColor='#fa8072'>
 
               {/* New Task Button */}
-              <ActionButton.Item buttonColor='#9b59b6' title="New Task" onPress={() => console.log("notes tapped!")}>
+              <ActionButton.Item buttonColor='#556b2f' title="New Task" onPress={() => console.log("notes tapped!")}>
                 <Icon name="md-create" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Home Button */}
-              <ActionButton.Item buttonColor='#fa8072' title="Home" onPress={() => { }}>
+              <ActionButton.Item buttonColor='#556b2f' title="Home" onPress={() => { }}>
                 <Icon name="md-home" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Sign Out Button */}
-              <ActionButton.Item buttonColor='#1abc9c' title="Sign Out" onPress={() => { }}>
+              <ActionButton.Item buttonColor='#556b2f' title="Sign Out" onPress={() => { }}>
                 <Icon name="md-done-all" style={styles.actionButtonIcon} />
               </ActionButton.Item>
             </ActionButton>
