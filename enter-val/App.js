@@ -4,6 +4,7 @@ import {
   createStackNavigator,
   createAppContainer,
 } from 'react-navigation'
+import firebase from 'firebase'
 
 //!! this is where we import new "screens"
 import HomeScreen from './screens/HomeScreen';
