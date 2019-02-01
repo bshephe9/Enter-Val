@@ -11,6 +11,9 @@ import HomeScreen from './screens/HomeScreen';
 import SettingsScreen from './screens/SettingsScreen'
 import UserScreen from './screens/UserScreen';
 import CreateTask from './screens/CreateTask';
+import Login from './screens/Login';
+import SignUp from './screens/SignUp';
+
 
 //!! this is the conection to Firebase!
  // Initialize Firebase
@@ -29,7 +32,9 @@ const AppNavigator = createStackNavigator({
   HomeScreen: { screen: HomeScreen },
   SettingsScreen: { screen: SettingsScreen },
   UserScreen: { screen: UserScreen },
-  CreateTask: { screen: CreateTask }
+  CreateTask: { screen: CreateTask },
+  Login: {screen: Login},
+  Main: {screen: SignUp}
 });
 
 
