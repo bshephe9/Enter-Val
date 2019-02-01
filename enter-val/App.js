@@ -11,6 +11,18 @@ import SettingsScreen from './screens/SettingsScreen'
 import UserScreen from './screens/UserScreen';
 import CreateTask from './screens/CreateTask';
 
+//!! this is the conection to Firebase!
+ // Initialize Firebase
+ const firebaseConfig = {
+  apiKey: "AIzaSyBr5d75r-qEKTaB6C0557OogBoH4TxIy-Q",
+  authDomain: "enter-val.firebaseapp.com",
+  databaseURL: "https://enter-val.firebaseio.com",
+  projectId: "enter-val",
+  storageBucket: "enter-val.appspot.com",
+  messagingSenderId: "987810672302"
+};
+firebase.initializeApp(firebaseConfig);
+
 //!! this renders new screens for them to be used in the app
 const AppNavigator = createStackNavigator({
   HomeScreen: { screen: HomeScreen },
