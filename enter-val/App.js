@@ -26,3 +26,5 @@ const App = createAppContainer(AppNavigator);
 
 //!! it also needs to be exported
 export default App;
+
+//** here is the new firebase data */
