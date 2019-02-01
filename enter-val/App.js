@@ -34,7 +34,7 @@ const AppNavigator = createStackNavigator({
   UserScreen: { screen: UserScreen },
   CreateTask: { screen: CreateTask },
   Login: {screen: Login},
-  Main: {screen: SignUp}
+  SignUp: {screen: SignUp}
 });
 
 
