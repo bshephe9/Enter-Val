@@ -23,7 +23,7 @@ export default class UserScreen extends React.Component {
     return (
 
       <ScrollView style={{ paddingVertical: 20, marginTop: 15 }}>
-        <Text>Hi {currentUser && currentUser.email}</Text>
+        <Text>Hello this is your email {currentUser && currentUser.email}</Text>
         <View>
           <Text style={styles.title}>
             Today
@@ -35,7 +35,7 @@ export default class UserScreen extends React.Component {
             style={{
               width: 80,
               height: 80,
-              borderRadius: 40,
+              borderRadius: 40, 
               marginBottom: 20,
               alignSelf: 'center',
               alignItems: 'center',
