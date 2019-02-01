@@ -3,81 +3,115 @@ import {
   ScrollView,
   Text,
   View,
-  StyleSheet
+  StyleSheet,
+  // Todo: Remove these after adding Form functionality
+  TextInput,
+  Button
 } from 'react-native';
+// Todo: Same as above
+import { Constants } from 'expo';
 import {
   Card
 } from 'react-native-elements';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
+import * as firebase from 'firebase';
 
-  export default class UserScreen extends React.Component {
-    render() {
-      return (
+const firebaseConfig = {
+  apiKey: 'AIzaSyCjElFvJeU2q9NQH3fbK-J8_NCKF5jCCi0',
+  authDomain: 'authenticationtest-4a489.firebaseapp.com',
+  databaseURL: 'https://authenticationtest-4a489.firebaseio.com',
+  projectId: 'authenticationtest-4a489',
+  storageBucket: 'authenticationtest-4a489.appspot.com',
+}
+firebase.initializeApp(firebaseConfig)
 
-      <ScrollView style={{ paddingVertical: 20, marginTop: 15}}>
+export default class UserScreen extends React.Component {
+  constructor(props) {
+    super(props)
 
-      <View> 
-        <Text style={styles.title}>
-          Today
-        </Text>
+    this.state = {
+      message: '',
+      messages: []
+    }
+
+    this.addItem = this.addItem.bind(this);
+  }
+
+  componentDidMount() {
+    firebase
+      .database()
+      .ref()
+      .child("messages")
+      .once("value", snapshot => {
+        const data = snapshot.val()
+        if (snapshot.val()) {
+          const initMessages = [];
+          Object
+            .keys(data)
+            .forEach(message => initMessages.push(data[message]));
+          this.setState({
+            messages: initMessages
+          })
+        }
+      });
+
+    firebase
+      .database()
+      .ref()
+      .child("messages")
+      .on("child_added", snapshot => {
+        const data = snapshot.val();
+        if (data) {
+          this.setState(prevState => ({
+            messages: [data, ...prevState.messages]
+          }))
+        }
+      })
+
+  }
+
+  addItem() {
+    if (!this.state.message) return;
+
+    const newMessage = firebase.database().ref()
+      .child("messages")
+      .push();
+    newMessage.set(this.state.message, () => this.setState({ message: '' }))
+  }
+  render() {
+    return (
+      <ScrollView>
+      <View style={styles.container}>
+        <View style={styles.msgBox}>
+          <TextInput placeholder='Enter your message'
+            value={this.state.message}
+            onChangeText={(text) => this.setState({ message: text })}
+            style={styles.txtInput} />
+          <Button title='Send' onPress={this.addItem} />
+        </View>
       </View>
-
-        <Card title='8:00 - 11:00 AM'>
-          <View
-            style={{
-              width: 80,
-              height: 80,
-              borderRadius: 40,
-              marginBottom: 20,
-              alignSelf: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Text style={styles.text}>
-              Insert
-            </Text>
-          </View>
-        </Card>
-        <Card title='11:00 - 2:00 PM'>
-          <View
-            style={{
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: 80,
-              height: 80,
-              borderRadius: 40,
-              alignSelf: 'center',
-              marginBottom: 20
-            }}
-          >
-            <Text style={styles.text}>
-                      Insert
-            </Text>
-          </View>
-        </Card>
-{/* 
-        <Card title='2:00 - 6:00 PM'>
-          <View
-            style={{
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: 80,
-              height: 80,
-              borderRadius: 40,
-              alignSelf: 'center',
-              marginBottom: 20
-            }}
-          >
-            <Text style={styles.text}>
-              Insert
-            </Text>
-          </View>
-        </Card> */}
+      <Card data={this.state.messages}
+        renderItem={
+          ({ item }) =>
+            <View style={styles.listItemContainer}>
+              <Text style={styles.listItem}>
+                {item}
+              </Text>
+            </View>
+        }
+    />
+      <ScrollView style={{ paddingVertical: 20, marginTop: 15 }}>
 
         <View>
-          <View style={{ flex: 1, backgroundColor: '#f3f3f3'}}>
+          <Text style={styles.title}>
+            Today
+        </Text>
+        </View>
+    
+
+        <View>
+          <View style={{ flex: 1, backgroundColor: '#f3f3f3' }}>
             {/* Rest of the app comes ABOVE the action button component !*/}
             <ActionButton buttonColor='#1e90ff'>
 
@@ -87,14 +121,14 @@ import Icon from 'react-native-vector-icons/Ionicons';
               </ActionButton.Item>
 
               {/* Home Button */}
-                <ActionButton.Item buttonColor='#1e90ff' title="Home" onPress={() => this.props.navigation.navigate('HomeScreen')}>
+              <ActionButton.Item buttonColor='#1e90ff' title="Home" onPress={() => this.props.navigation.navigate('HomeScreen')}>
                 <Icon name="md-home" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Sign Out Button */}
-              <ActionButton.Item buttonColor='#1e90ff' title="Sign Out" 
-              //?? in here we have to add code for loging out if thats the purpose of this button!
-              onPress={() => this.props.navigation.navigate('HomeScreen')}>
+              <ActionButton.Item buttonColor='#1e90ff' title="Sign Out"
+                //?? in here we have to add code for loging out if thats the purpose of this button!
+                onPress={() => this.props.navigation.navigate('HomeScreen')}>
                 <Icon name="md-done-all" style={styles.actionButtonIcon} />
               </ActionButton.Item>
             </ActionButton>
@@ -103,9 +137,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
         </View>
 
       </ScrollView>
+</ScrollView>
     );
   }
-  }
+}
 const styles = StyleSheet.create({
   text: {
     fontSize: 20,
@@ -115,11 +150,17 @@ const styles = StyleSheet.create({
     height: 22,
     color: 'white',
   },
-  title: { 
-    fontWeight: 'bold', 
-    fontSize: 25, 
+  title: {
+    fontWeight: 'bold',
+    fontSize: 25,
     textAlign: 'center',
     marginBottom: 15,
     color: '#1e90ff',
+  },
+  listItemContainer: { 
+    flex: 1,
+    backgroundColor: '#fff',
+    margin: 5,
+    borderRadius: 5
   },
 });
