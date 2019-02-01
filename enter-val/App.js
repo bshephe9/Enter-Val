@@ -23,18 +23,17 @@ import SignUp from './screens/SignUp';
   databaseURL: "https://enter-val.firebaseio.com",
   projectId: "enter-val",
   storageBucket: "enter-val.appspot.com",
-  messagingSenderId: "987810672302"
 };
 firebase.initializeApp(firebaseConfig);
 
 //!! this renders new screens for them to be used in the app
 const AppNavigator = createStackNavigator({
   HomeScreen: { screen: HomeScreen },
-  SettingsScreen: { screen: SettingsScreen },
+  SettingsScreen: { screen: SignUp },
   UserScreen: { screen: UserScreen },
   CreateTask: { screen: CreateTask },
   Login: {screen: Login},
-  SignUp: {screen: SignUp}
+  // SignUp: {screen: SignUp}
 });
 
 

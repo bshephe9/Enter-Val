@@ -10,18 +10,25 @@ import {
 } from 'react-native-elements';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
+import firebase from 'firebase';
 
-  export default class UserScreen extends React.Component {
-    render() {
-      return (
+export default class UserScreen extends React.Component {
+  state = { currentUser: null }
+  componentDidMount() {
+    const { currentUser } = firebase.auth()
+    this.setState({ currentUser })
+  }
+  render() {
+    const {currentUser} = this.state
+    return (
 
-      <ScrollView style={{ paddingVertical: 20, marginTop: 15}}>
-
-      <View> 
-        <Text style={styles.title}>
-          Today
+      <ScrollView style={{ paddingVertical: 20, marginTop: 15 }}>
+        <Text>Hi {currentUser && currentUser.email}</Text>
+        <View>
+          <Text style={styles.title}>
+            Today
         </Text>
-      </View>
+        </View>
 
         <Card title='8:00 - 11:00 AM'>
           <View
@@ -53,11 +60,11 @@ import Icon from 'react-native-vector-icons/Ionicons';
             }}
           >
             <Text style={styles.text}>
-                      Insert
+              Insert
             </Text>
           </View>
         </Card>
-{/* 
+        {/* 
         <Card title='2:00 - 6:00 PM'>
           <View
             style={{
@@ -77,7 +84,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
         </Card> */}
 
         <View>
-          <View style={{ flex: 1, backgroundColor: '#f3f3f3'}}>
+          <View style={{ flex: 1, backgroundColor: '#f3f3f3' }}>
             {/* Rest of the app comes ABOVE the action button component !*/}
             <ActionButton buttonColor='#1e90ff'>
 
@@ -87,14 +94,14 @@ import Icon from 'react-native-vector-icons/Ionicons';
               </ActionButton.Item>
 
               {/* Home Button */}
-                <ActionButton.Item buttonColor='#1e90ff' title="Home" onPress={() => this.props.navigation.navigate('HomeScreen')}>
+              <ActionButton.Item buttonColor='#1e90ff' title="Home" onPress={() => this.props.navigation.navigate('HomeScreen')}>
                 <Icon name="md-home" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Sign Out Button */}
-              <ActionButton.Item buttonColor='#1e90ff' title="Sign Out" 
-              //?? in here we have to add code for loging out if thats the purpose of this button!
-              onPress={() => this.props.navigation.navigate('HomeScreen')}>
+              <ActionButton.Item buttonColor='#1e90ff' title="Sign Out"
+                //?? in here we have to add code for loging out if thats the purpose of this button!
+                onPress={() => this.props.navigation.navigate('HomeScreen')}>
                 <Icon name="md-done-all" style={styles.actionButtonIcon} />
               </ActionButton.Item>
             </ActionButton>
@@ -105,7 +112,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
       </ScrollView>
     );
   }
-  }
+}
 const styles = StyleSheet.create({
   text: {
     fontSize: 20,
@@ -115,9 +122,9 @@ const styles = StyleSheet.create({
     height: 22,
     color: 'white',
   },
-  title: { 
-    fontWeight: 'bold', 
-    fontSize: 25, 
+  title: {
+    fontWeight: 'bold',
+    fontSize: 25,
     textAlign: 'center',
     marginBottom: 15,
     color: '#1e90ff',

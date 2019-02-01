@@ -9,7 +9,7 @@ handleSignUp = () => {
     .auth()
     .createUserWithEmailAndPassword(this.state.email,
         this.state.password)
-        .then(() => this.props.navigation.navigate('Main'))
+        .then(() => this.props.navigation.navigate('UserScreen'))
         .catch(error => this.setState({ errorMessage: error.message }))
   // TODO: Firebase stuff...
   console.log('handleSignUp')
