@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { APIKEY } from '../utils/keys';
 
 
-const APIkey = '166a433c57516f51dfab1f7edaed8413'
 
 export default class App extends React.Component {
   state = {
@@ -19,7 +19,7 @@ export default class App extends React.Component {
 
   fetchWeather(city) {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIkey}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKEY}`
     )
       .then(res => res.json())
       .then(json => {
@@ -39,7 +39,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <MaterialCommunityIcons name={conditions['Clear'].icon} size={75} color = {conditions['Clear'].color}/>
+        <MaterialCommunityIcons name={conditions['Clear'].icon} size={75} color={conditions['Clear'].color} />
         <Text>ATLANTA</Text>
         <Text>Temperature: {this.state.temperature}º</Text>
         <Text>Max: {this.state.maxTemp}º | Min: {this.state.minTemp}º </Text>
