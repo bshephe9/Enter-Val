@@ -7,14 +7,19 @@ import {
 } from 'react-native';
 import Button from 'react-native-button';
 
+
 export default class HomeScreen extends React.Component {
 
+  static navigationOptions = {
+    header: null,
+  };
   state = {
     curTime: null,
     curDate: null
-  }
+  };
 
   componentDidMount() {
+
     setInterval(() => {
       this.setState({
         curTime: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
