@@ -62,14 +62,6 @@ export default class HomeScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-<<<<<<< HEAD
-  container: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-  },
-=======
->>>>>>> fa4cac1063dc366a667183d7460ac98a54a02044
   overlayContainer: {
     alignItems: 'center',
     color: 'black',
