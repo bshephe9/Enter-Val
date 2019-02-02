@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   overlayContainer: {
     alignItems: 'center',
     color: 'black',
-    marginTop: 15,
+    marginTop: 25,
   },
   header: {
     fontSize: 35,
