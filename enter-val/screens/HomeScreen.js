@@ -44,15 +44,14 @@ export default class HomeScreen extends React.Component {
           </View>
 
           <View>
-            <Text style={styles.content}>"Keep going. Be all in."</Text>
-          </View>
-
-          <View>
             <Button
-              style={{ fontSize: 20, color: '#fff', marginTop: 300, borderColor: '#fa8072', backgroundColor: '#556b2f', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden', }}
+              style={{ fontSize: 20, color: '#fff', marginTop: 300, borderColor: '#fa8072', backgroundColor: '#e9967a', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden', }}
               onPress={() => this.props.navigation.navigate('SettingsScreen')}>
               get started
             </Button>
+          </View>
+          <View>
+            <Text style={styles.content}>"Keep going. Be all in."</Text>
           </View>
         </View>
       </ImageBackground>
@@ -83,7 +82,9 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   content: {
-    fontSize: 15,
-    fontStyle: 'italic'
+    fontSize: 18,
+    fontStyle: 'italic',
+    color: '#fff',
+    marginTop: 200,
   }
 });

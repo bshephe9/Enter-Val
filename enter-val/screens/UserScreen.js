@@ -84,7 +84,7 @@ export default class UserScreen extends React.Component {
         </Card> */}
 
         <View>
-          <View style={{ flex: 1, backgroundColor: '#f3f3f3' }}>
+          <View style={{ flex: 1, backgroundColor: '#556b2f' }}>
             {/* Rest of the app comes ABOVE the action button component !*/}
             <ActionButton buttonColor='#1e90ff'>
 
