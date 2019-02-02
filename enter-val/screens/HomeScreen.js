@@ -7,28 +7,43 @@ import {
 } from 'react-native';
 import Button from 'react-native-button';
 
+const APIKEY = '166a433c57516f51dfab1f7edaed8413';
+
 export default class HomeScreen extends React.Component {
 
   state = {
     curTime: null,
-    curDate: null
+    curDate: null,
+    temperature: 0
   }
-
   componentDidMount() {
+    this.fetchWeather('Atlanta');
     setInterval(() => {
       this.setState({
         curTime: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         curDate: new Date().toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })
       })
     }, 1000)
+    this.fetchWeather()
+
   }
 
+  fetchWeather(city) {
+    fetch(
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKEY}`
+    )
+      .then(res => res.json())
+      .then(json => {
+        const tempF = Math.round((json.main.temp - 273.15) * 9 / 5 + 32);
+        this.setState({ temperature: tempF});
+      });
+  }
   render() {
     return (
       <ImageBackground style={{
         flex: 1,
         resizeMode: 'cover',
-        }}
+      }}
         source={require('../assets/images/bg.jpg')}>
 
         <View style={styles.overlayContainer}>
@@ -41,6 +56,9 @@ export default class HomeScreen extends React.Component {
 
           <View>
             <Text style={styles.timer}>{this.state.curTime}</Text>
+          </View>
+          <View>
+            <Text style={styles.timer}>{this.state.temperature}º</Text>
           </View>
 
           <View>
@@ -85,6 +103,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontStyle: 'italic',
     color: '#fff',
-    marginTop: 200,
+    marginTop: 150,
   }
 });
