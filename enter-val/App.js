@@ -8,7 +8,6 @@ import firebase from 'firebase'
 
 //!! this is where we import new "screens"
 import HomeScreen from './screens/HomeScreen';
-import SettingsScreen from './screens/SettingsScreen'
 import UserScreen from './screens/UserScreen';
 import CreateTask from './screens/CreateTask';
 import Login from './screens/Login';
@@ -28,7 +27,7 @@ firebase.initializeApp(firebaseConfig);
 
 //!! this renders new screens for them to be used in the app
 const AppNavigator = createStackNavigator({
-  HomeScreen: { screen: HomeScreen },
+  HomeScreen: { screen: HomeScreen, header:{visible:false}},
   SettingsScreen: { screen: SignUp },
   UserScreen: { screen: UserScreen },
   CreateTask: { screen: CreateTask },
