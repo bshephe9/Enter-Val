@@ -10,7 +10,10 @@ import Button from 'react-native-button';
 const APIKEY = '166a433c57516f51dfab1f7edaed8413';
 
 export default class HomeScreen extends React.Component {
-
+  static navigationOptions = {
+    header: { visible: false }
+  }
+  
   state = {
     curTime: null,
     curDate: null,
