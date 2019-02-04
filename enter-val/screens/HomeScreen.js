@@ -10,6 +10,9 @@ import Button from 'react-native-button';
 const APIKEY = '166a433c57516f51dfab1f7edaed8413';
 
 export default class HomeScreen extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
 
   state = {
     curTime: null,
@@ -94,7 +97,7 @@ const styles = StyleSheet.create({
   timer: {
     color: '#fff',
     fontSize: 25,
-    marginTop: 10,
+    marginTop: 75,
     marginBottom: 10
   },
   content: {
