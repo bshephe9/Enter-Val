@@ -97,13 +97,13 @@ const styles = StyleSheet.create({
   timer: {
     color: '#fff',
     fontSize: 25,
-    marginTop: 75,
-    marginBottom: 10
+    marginTop: 30,
+    marginBottom: 6
   },
   content: {
     fontSize: 18,
     fontStyle: 'italic',
     color: '#fff',
-    marginTop: 150,
+    marginTop: 190,
   }
 });
