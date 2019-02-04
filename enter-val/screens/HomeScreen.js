@@ -23,9 +23,7 @@ export default class HomeScreen extends React.Component {
         curTime: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         curDate: new Date().toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })
       })
-    }, 1000)
-    this.fetchWeather()
-
+    }, 1000)    
   }
 
   fetchWeather(city) {
