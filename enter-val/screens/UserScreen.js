@@ -23,43 +23,12 @@ class UserScreen extends React.Component {
             Today
         </Text>
         </View>
+      
+        {/* passing the props refered to tasks to the card component */}
+        <CardComp tasks={tasks}/>
 
-        <CardComp />
-        {/* <Card title='8:00 - 11:00 AM'>
-          <View
-            style={{
-              width: 80,
-              height: 80,
-              borderRadius: 40,
-              marginBottom: 20,
-              alignSelf: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          > */}
-        {/* <Text style={styles.text}>
-              Insert
-            </Text>
-          </View>
-        </Card> */}
-        {/* <Card title='11:00 - 2:00 PM'>
-          <View
-            style={{
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: 80,
-              height: 80,
-              borderRadius: 40,
-              alignSelf: 'center',
-              marginBottom: 20
-            }}
-          >
-            <Text style={styles.text}>
-              Insert
-            </Text>
-          </View>
-        </Card> */}
 
+        {/* TODO Create a component fort the button */}
         <View>
           <View style={{ flex: 1, backgroundColor: '#f3f3f3', marginTop: 150 }}>
             {/* Rest of the app comes ABOVE the action button component !*/}

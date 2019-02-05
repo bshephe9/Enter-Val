@@ -1,7 +1,7 @@
 const initState = {
     tasks: [
         {id: '1', startTime: '11:30', endTime: '12:30' , task: 'Laundry', body:'Dark'},
-        {id: '1', startTime: '13:30', endTime: '14:30' , task: 'Lunch', body:'Pasta'}
+        {id: '2', startTime: '13:30', endTime: '14:30' , task: 'Lunch', body:'Pasta'}
     ]
 };
 
