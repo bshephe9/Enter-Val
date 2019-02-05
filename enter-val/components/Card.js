@@ -30,7 +30,9 @@ const CardComp = ({ tasks }) => {
                                 alignItems: 'center',
                                 justifyContent: 'center',
                             }}>
+                            <Text>{task.startTime} - {task.endTime}</Text>
                             <Text>{task.task}</Text>
+                            <Text>{task.body}</Text>
                         </View>
                     </Card>
                 )
