@@ -26,9 +26,7 @@ export default class HomeScreen extends React.Component {
         curTime: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         curDate: new Date().toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })
       })
-    }, 1000)
-    this.fetchWeather()
-
+    }, 1000)    
   }
 
   fetchWeather(city) {
@@ -84,7 +82,7 @@ const styles = StyleSheet.create({
   overlayContainer: {
     alignItems: 'center',
     color: 'black',
-    marginTop: 25,
+    marginTop: 75,
   },
   header: {
     fontSize: 35,
@@ -99,8 +97,8 @@ const styles = StyleSheet.create({
   timer: {
     color: '#fff',
     fontSize: 25,
-    marginTop: 75,
-    marginBottom: 10
+    marginTop: 30,
+    marginBottom: 6
   },
   content: {
     fontSize: 18,
