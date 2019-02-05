@@ -4,6 +4,9 @@ import { StyleSheet, Text, TextInput, View, TouchableOpacity, ImageBackground } 
 import firebase from 'firebase';
 
 export default class SignUp extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
   state = { email: '', password: '', errorMessage: null }
   handleSignUp = () => {
     firebase
@@ -49,11 +52,14 @@ export default class SignUp extends React.Component {
             onChangeText={password => this.setState({ password })}
             value={this.state.password}
           />
-          <TouchableOpacity style={styles.signup} title="Sign Up" onPress={this.handleSignUp} />
+          <TouchableOpacity style={styles.signup} onPress={this.handleSignUp}>
+          <Text style={{ color: '#fff', fontWeight: 'bold', marginTop: 5}}>Sign Up</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.login}
-            title="Already have an account? Login"
             onPress={() => this.props.navigation.navigate('Login')}
-          />
+          >
+          <Text style={{ color: '#fff', fontWeight: 'bold', marginTop: 5}}>Login</Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground >
     )
@@ -63,7 +69,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    marginTop: 200,
+    marginTop: 250,
     color: '#fff',
     borderRadius: 5,
   },
@@ -85,6 +91,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginTop: 8,
     borderRadius: 5,
+    alignItems: 'center',
   },
   login: {
     height: 35,
@@ -93,7 +100,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#e9967a',
     borderWidth: 1,
     marginTop: 8,
-    color: '#fff',
     borderRadius: 5,
+    alignItems: 'center',
   },
 })

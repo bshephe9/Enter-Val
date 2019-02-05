@@ -58,10 +58,10 @@ export default class HomeScreen extends React.Component {
           </View>
 
           <View>
-            <Text style={styles.timer}>{this.state.curTime}</Text>
+            <Text style={styles.clock}>{this.state.curTime}</Text>
           </View>
           <View>
-            <Text style={styles.timer}>{this.state.temperature}º</Text>
+            <Text style={styles.temp}>{this.state.temperature}º</Text>
           </View>
 
           <View>
@@ -106,6 +106,16 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontStyle: 'italic',
     color: '#fff',
-    marginTop: 150,
+    marginTop: 175,
+  },
+  temp:{ 
+    marginTop: 10, 
+    color: '#fff',
+    fontSize: 20,
+  }, 
+  clock: { 
+    marginTop: 10,
+    color: '#fff',
+    fontSize: 20,
   }
 });
