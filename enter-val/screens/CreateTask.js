@@ -3,6 +3,7 @@ import { ScrollView, View, Button } from 'react-native';
 import { FormLabel, FormInput } from 'react-native-elements';
 import moment from 'moment';
 
+
 class CreateTask extends React.Component {
     state = {
         startTime: '',
@@ -38,6 +39,7 @@ class CreateTask extends React.Component {
 
     render() {
         return (
+
             <ScrollView>
                 <View>
                     <FormLabel>Start Time (Military time - HH:mm)</FormLabel>
@@ -57,6 +59,7 @@ class CreateTask extends React.Component {
                     <Button title="Submit" onPress={this.submit} />
                 </View>
             </ScrollView>
+
         );
     }
 }

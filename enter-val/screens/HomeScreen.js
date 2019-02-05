@@ -9,6 +9,7 @@ import Button from 'react-native-button';
 
 const APIKEY = '166a433c57516f51dfab1f7edaed8413';
 
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -65,7 +66,7 @@ export default class HomeScreen extends React.Component {
           <View>
             <Button
               style={{ fontSize: 20, color: '#fff', marginTop: 300, borderColor: '#fa8072', backgroundColor: '#e9967a', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden', }}
-              onPress={() => this.props.navigation.navigate('SettingsScreen')}>
+              onPress={() => this.props.navigation.navigate('SignUp')}>
               get started
             </Button>
           </View>

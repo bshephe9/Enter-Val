@@ -12,8 +12,6 @@ export default class SignUp extends React.Component {
         this.state.password)
       .then(() => this.props.navigation.navigate('UserScreen'))
       .catch(error => this.setState({ errorMessage: error.message }))
-    // TODO: Firebase stuff...
-    console.log('handleSignUp')
   }
   render() {
     return (
