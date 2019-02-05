@@ -1,22 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {
-  createStackNavigator,
-  createAppContainer,
-} from 'react-navigation'
 import firebase from 'firebase'
+import AppNavigation from './navigation/AppNavigation';
+import rootReducer from './redux/store/reducers/rootReducer';
 
-//!! this is where we import new "screens"
-import HomeScreen from './screens/HomeScreen';
-import UserScreen from './screens/UserScreen';
-import CreateTask from './screens/CreateTask';
-import Login from './screens/Login';
-import SignUp from './screens/SignUp';
+//Redux
+import { Provider } from 'react-redux';
+// import { store } from './redux/app-redux';
+import {createStore} from 'redux';
 
 
 //!! this is the conection to Firebase!
- // Initialize Firebase
- const firebaseConfig = {
+// Initialize Firebase
+const firebaseConfig = {
   apiKey: "AIzaSyBr5d75r-qEKTaB6C0557OogBoH4TxIy-Q",
   authDomain: "enter-val.firebaseapp.com",
   databaseURL: "https://enter-val.firebaseio.com",
@@ -25,19 +21,21 @@ import SignUp from './screens/SignUp';
 };
 firebase.initializeApp(firebaseConfig);
 
-//!! this renders new screens for them to be used in the app
-const AppNavigator = createStackNavigator({
-  HomeScreen: { screen: HomeScreen, header:{visible:false}},
-  SettingsScreen: { screen: SignUp },
-  UserScreen: { screen: UserScreen },
-  CreateTask: { screen: CreateTask },
-  Login: {screen: Login},
-  // SignUp: {screen: SignUp}
-});
+
+// Store for redux with the reducer rootReducer
+const store = createStore(rootReducer);
 
 
 //!! this container was created during V3 and is required for the routes to work
-const App = createAppContainer(AppNavigator);
+class App extends React.Component {
+  render(){
+    return(
+      <Provider store={store}>
+      <AppNavigation />
+      </Provider>
+    )
+  }
+}
 
 
 //!! it also needs to be exported
