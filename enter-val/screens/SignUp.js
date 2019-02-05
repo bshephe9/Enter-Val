@@ -33,7 +33,7 @@ export default class SignUp extends React.Component {
             </Text>}
           <TextInput
             placeholder="Email"
-            placeholderTextColor="black"
+            placeholderTextColor="white"
             autoCapitalize="none"
             style={styles.textInput}
             onChangeText={email => this.setState({ email })}
@@ -42,7 +42,7 @@ export default class SignUp extends React.Component {
           <TextInput
             secureTextEntry
             placeholder="Password"
-            placeholderTextColor="black"
+            placeholderTextColor="white"
             autoCapitalize="none"
             style={styles.textInput}
             onChangeText={password => this.setState({ password })}
@@ -67,17 +67,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 250,
     color: '#fff',
-    borderRadius: 5,
+    borderRadius: 10,
   },
   textInput: {
     height: 40,
     width: '90%',
     borderColor: '#fff',
-    backgroundColor: '#fff',
-    borderWidth: 1,
+    backgroundColor: 'transparent',
+    borderWidth: 2,
     marginTop: 8,
     color: 'black',
-    borderRadius: 5,
+    borderRadius: 10,
+    padding: 5,
   },
   signup: {
     height: 35,
