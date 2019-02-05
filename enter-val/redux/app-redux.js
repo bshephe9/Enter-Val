@@ -10,7 +10,7 @@ const initialState = {
     body: ''
 }
 
-//Reducers 
+//Reducers take an action manipulate the state depending of the action. 
 
 const reducer = (state = initialState, action ) => {
  return state;
@@ -21,3 +21,8 @@ const store = createStore(reducer, applyMiddleware(thunkMiddlware));
 
 
 export {store};
+
+
+
+//create store is in the app-redux file
+

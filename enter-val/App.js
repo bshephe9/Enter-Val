@@ -2,11 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import firebase from 'firebase'
 import AppNavigation from './navigation/AppNavigation';
-
+import rootReducer from './redux/store/reducers/rootReducer';
 
 //Redux
 import { Provider } from 'react-redux';
-import { store } from './redux/app-redux';
+// import { store } from './redux/app-redux';
+import {createStore} from 'redux';
+
+
 //!! this is the conection to Firebase!
 // Initialize Firebase
 const firebaseConfig = {
@@ -17,6 +20,10 @@ const firebaseConfig = {
   storageBucket: "enter-val.appspot.com",
 };
 firebase.initializeApp(firebaseConfig);
+
+
+// Store for redux with the reducer rootReducer
+const store = createStore(rootReducer);
 
 
 //!! this container was created during V3 and is required for the routes to work
