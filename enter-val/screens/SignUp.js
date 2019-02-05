@@ -4,9 +4,7 @@ import { StyleSheet, Text, TextInput, View, TouchableOpacity, ImageBackground } 
 import firebase from 'firebase';
 
 export default class SignUp extends React.Component {
-  static navigationOptions = {
-    header: null,
-  };
+
   state = { email: '', password: '', errorMessage: null }
   handleSignUp = () => {
     firebase
