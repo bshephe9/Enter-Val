@@ -1,10 +1,10 @@
 import React from 'react';
 import AppNavigation from './navigation/AppNavigation';
 import { Provider } from 'react-redux'
-import firebaseApp from './firebase';
+// import firebaseApp from './firebase';
 import firebase from 'firebase';
 
-console.log('Firebase Initialize: ', firebaseApp)
+// console.log('Firebase Initialize: ', firebaseApp)
 
 import { createStore } from 'redux'
 import taskReducer from './redux/store/reducers/taskReducer'

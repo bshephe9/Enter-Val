@@ -1,9 +1,7 @@
 import React from 'react';
 import {
-    ScrollView,
     Text,
-    View,
-    StyleSheet
+    View
 } from 'react-native';
 import {
     Card
