@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, View, Button } from 'react-native';
 import { FormLabel, FormInput } from 'react-native-elements';
+import firebase from 'firebase';
 
 class CreateTask extends React.Component {
     state = {
@@ -11,15 +12,34 @@ class CreateTask extends React.Component {
     }
 
     submit = () => {
-        this.setState({ startTime: '', endTime: '', task: '', body: '' });
+        const startTime = this.state.startTime;
+        const endTime = this.state.endTime;
+        const task = this.state.task;
+        const body = this.state.body;
+        const newTask = {
+            startTime: startTime,
+            endTime: endTime,
+            task: task,
+            body: body
+        }
+        firebase.database().ref().push(newTask); //pushing to the database
+        //Emptying the form 
+        this.setState({   
+        startTime: '',
+        endTime: '',
+        task: '',
+        body: '' });
     }
     introTime = event => {
         this.setState({ startTime: event });
     };
 
+
+
     endTime = event => {
         this.setState({ endTime: event });
     };
+
 
     changeBody = event => {
         this.setState({ body: event });

@@ -6,7 +6,6 @@ import config from './config/config';
 
 // console.log('Firebase Initialize: ', firebase.INTERNAL)
 
-
 // Initialize firebase instance
 firebase.initializeApp(config)
 console.log('Firebase Initialized!');
