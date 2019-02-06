@@ -46,7 +46,7 @@ export default class HomeScreen extends React.Component {
         flex: 1,
         resizeMode: 'cover',
       }}
-        source={require('../assets/images/bg.jpg')}>
+        source={require('../assets/images/cloudgif.gif')}>
 
         <View style={styles.overlayContainer}>
           <View>
@@ -65,7 +65,7 @@ export default class HomeScreen extends React.Component {
 
           <View>
             <Button
-              style={{ fontSize: 20, color: '#fff', marginTop: 300, borderColor: '#fa8072', backgroundColor: '#e9967a', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden', }}
+              style={{ fontSize: 20, color: '#fff', marginTop: 400, borderColor: '#fa8072', backgroundColor: '#e9967a', padding: 4, paddingLeft: 20, paddingRight: 20, borderRadius: 5, overflow: 'hidden', }}
               onPress={() => this.props.navigation.navigate('SignUp')}>
               get started
             </Button>
@@ -105,7 +105,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontStyle: 'italic',
     color: '#fff',
-    marginTop: 175,
+    marginTop: 75,
+    fontWeight: 'bold'
   },
   temp:{ 
     marginTop: 10, 
