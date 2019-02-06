@@ -8,7 +8,8 @@ class CreateTask extends React.Component {
         startTime: '',
         endTime: '',
         task: '',
-        body: ''
+        body: '',
+        id: 0
     }
 
     submit = () => {
@@ -16,11 +17,14 @@ class CreateTask extends React.Component {
         const endTime = this.state.endTime;
         const task = this.state.task;
         const body = this.state.body;
+        const id = this.state.id + 1 ;
+        console.log(id);
         const newTask = {
             startTime: startTime,
             endTime: endTime,
             task: task,
-            body: body
+            body: body,
+            id: id
         }
         firebase.database().ref().push(newTask); //pushing to the database
         //Emptying the form 
@@ -28,18 +32,17 @@ class CreateTask extends React.Component {
         startTime: '',
         endTime: '',
         task: '',
-        body: '' });
+        body: '',
+        id: this.state.id + 1 }); //TODO find how to increase the counter to each card has it own id
+        this.props.navigation.navigate('UserScreen')
     }
     introTime = event => {
         this.setState({ startTime: event });
     };
 
-
-
     endTime = event => {
         this.setState({ endTime: event });
     };
-
 
     changeBody = event => {
         this.setState({ body: event });

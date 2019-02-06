@@ -8,13 +8,31 @@ import {
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import CardComp from '../components/Card';
+import firebase from 'firebase';
 
 
 class UserScreen extends React.Component {
-  render() {
-    const { tasks } = this.props
-    return (
 
+  componentDidMount() {
+    this.connecting();
+  }
+
+  connecting() {
+    firebase.database().ref().on('child_added', snap => {
+      const taskObj = {
+        startTime: snap.val().startTime,
+        endTime: snap.val().endTime,
+        task: snap.val().task,
+        body: snap.val().body
+      }
+      return taskObj;
+    })
+  }
+
+  render() {
+    // const { tasks } = ;
+    // console.log('PROPS HERE: ', this.props);
+    return (
       <ScrollView style={{ paddingVertical: 20, marginTop: 15 }}>
 
         <View>
@@ -24,7 +42,7 @@ class UserScreen extends React.Component {
         </View>
 
         {/* passing the props refered to tasks to the card component */}
-        <CardComp tasks={tasks} />
+        {/* <CardComp tasks={tasks} /> */}
 
 
         {/* TODO Create a component fort the button */}
