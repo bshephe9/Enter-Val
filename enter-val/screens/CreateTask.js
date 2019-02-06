@@ -18,7 +18,6 @@ class CreateTask extends React.Component {
         const task = this.state.task;
         const body = this.state.body;
         const id = this.state.id + 1 ;
-        console.log(id);
         const newTask = {
             startTime: startTime,
             endTime: endTime,

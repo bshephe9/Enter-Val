@@ -12,26 +12,29 @@ import firebase from 'firebase';
 
 
 class UserScreen extends React.Component {
-
+  state = {
+    tasks: []
+  }
   componentDidMount() {
     this.connecting();
   }
 
   connecting() {
     firebase.database().ref().on('child_added', snap => {
-      const taskObj = {
+      const tasksArr = [{
         startTime: snap.val().startTime,
         endTime: snap.val().endTime,
         task: snap.val().task,
-        body: snap.val().body
-      }
-      return taskObj;
+        body: snap.val().body,
+        id: snap.val().id
+      }]
+      this.setState({ tasks: tasksArr });
     })
   }
 
   render() {
-    // const { tasks } = ;
-    // console.log('PROPS HERE: ', this.props);
+    // console.log(this.state);
+    // const { tasks } = this.state;
     return (
       <ScrollView style={{ paddingVertical: 20, marginTop: 15 }}>
 
@@ -42,8 +45,10 @@ class UserScreen extends React.Component {
         </View>
 
         {/* passing the props refered to tasks to the card component */}
-        {/* <CardComp tasks={tasks} /> */}
-
+        {this.state.tasks.map (task => (
+             <CardComp {...task} />
+        ))}
+     
 
         {/* TODO Create a component fort the button */}
         <View>
