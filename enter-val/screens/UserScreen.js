@@ -10,8 +10,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import CardComp from '../components/Card';
 //connect to the store. Glues redux to react
 import { connect } from 'react-redux';
-// import { firestoreConnect } from 'react-redux-firebase';
-// import { compose } from 'redux';
+
 
 class UserScreen extends React.Component {
   render() {
@@ -64,23 +63,13 @@ class UserScreen extends React.Component {
 
 //map all the states contained in the store (redux). Inside the rootReducer we have task and inside that file is tasks (taskReducer)
 const mapStateToProps = state => {
-  console.log(state);
+  // console.log(state);
   return {
-    tasks: state.task.tasks
+    tasks: state.tasks.task
   }
 }
 
 export default connect(mapStateToProps)(UserScreen);
-
-
-// export default compose(
-//   connect(mapStateToProps),
-//   // firestoreConnect([
-//   //   { collection: 'tasks' } //when the component is active we are gonna to listen to the tasks collection
-//   // ])
-// )(UserScreen);
-
-
 
 
 

@@ -1,9 +1,7 @@
 // SignUp.js
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, ImageBackground } from 'react-native';
-// import firebase from 'firebase';
-import { connect } from 'react-redux';
-// import { signIn } from '../redux/store/actions/authActions';
+import firebase from 'firebase';
 
 
 class SignUp extends React.Component {
@@ -12,15 +10,13 @@ class SignUp extends React.Component {
   };
   state = { email: '', password: '' }
   handleSignUp = () => {
-    // firebase
-    //   .auth()
-    //   .createUserWithEmailAndPassword(this.state.email,
-    //     this.state.password)
-    //   .then(() => this.props.navigation.navigate('UserScreen'))
-    //   .catch(error => this.setState({ errorMessage: error.message }))
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(this.state.email,
+        this.state.password)
+      .then(() => this.props.navigation.navigate('UserScreen'))
+      .catch(error => this.setState({ errorMessage: error.message }))
     this.props.navigation.navigate('UserScreen')
-    console.log('AAAAAAA: ', this.props)
-    this.props.signIn(this.state)
 
   }
   render() {
@@ -71,13 +67,7 @@ class SignUp extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  // return {
-  //   signIn: (creds) => dispatch(signIn(creds))
-  // }
-}
-
-export default connect(null, mapDispatchToProps)(SignUp)
+export default SignUp;
 
 const styles = StyleSheet.create({
   container: {
