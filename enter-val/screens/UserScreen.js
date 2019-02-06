@@ -34,24 +34,20 @@ class UserScreen extends React.Component {
         <View>
           <View style={{ flex: 1, backgroundColor: '#f3f3f3', marginTop: 250 }}>
             {/* Rest of the app comes ABOVE the action button component !*/}
-            <ActionButton buttonColor='#1e90ff'>
+            <ActionButton buttonColor='#9400d3'>
 
               {/* New Task Button */}
-              <ActionButton.Item buttonColor='#1e90ff' title="New Task" onPress={() => this.props.navigation.navigate('CreateTask')}>
-                <Icon name="md-create" style={styles.actionButtonIcon} />
-              </ActionButton.Item>
-
-              <ActionButton.Item buttonColor='#1e90ff' title="Weather" onPress={() => this.props.navigation.navigate('HomeScreen')}>
+              <ActionButton.Item buttonColor='#9400d3' title="New Task" onPress={() => this.props.navigation.navigate('CreateTask')}>
                 <Icon name="md-create" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Home Button */}
-              <ActionButton.Item buttonColor='#1e90ff' title="Home" onPress={() => this.props.navigation.navigate('HomeScreen')}>
+              <ActionButton.Item buttonColor='#9400d3' title="Home" onPress={() => this.props.navigation.navigate('HomeScreen')}>
                 <Icon name="md-home" style={styles.actionButtonIcon} />
               </ActionButton.Item>
 
               {/* Sign Out Button */}
-              <ActionButton.Item buttonColor='#1e90ff' title="Sign Out"
+              <ActionButton.Item buttonColor='#9400d3' title="Sign Out"
                 //?? in here we have to add code for loging out if thats the purpose of this button!
                 onPress={() => this.props.navigation.navigate('HomeScreen')}>
                 <Icon name="md-done-all" style={styles.actionButtonIcon} />
@@ -102,6 +98,6 @@ const styles = StyleSheet.create({
     fontSize: 25,
     textAlign: 'center',
     marginBottom: 15,
-    color: '#1e90ff',
+    color: '#9400d3',
   },
 });

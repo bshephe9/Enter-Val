@@ -29,11 +29,11 @@ class SignUp extends React.Component {
         flex: 1,
         resizeMode: 'cover'
       }}
-        source={require('../assets/images/bg.jpg')}
-        blurRadius={5}>
+        source={require('../assets/images/cloudgif.gif')}
+        >
 
         <View style={styles.container}>
-          <Text style={{ fontSize: 30, fontWeight: 'bold', marginBottom: 20, color: '#fff' }}>
+          <Text style={{ fontSize: 30, fontWeight: 'bold', marginBottom: 20, color: 'black', marginTop: 35}}>
             Get Started with EnterVal</Text>
 
           {this.state.errorMessage &&
@@ -83,19 +83,27 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    marginTop: 250,
+    marginTop: 300,
     color: '#fff',
-    borderRadius: 5,
+    borderRadius: 10,
+    borderWidth: 2,
+    marginBottom: 280,
+    borderColor: '#ffffff78',
+    backgroundColor: '#ffffff78',
+    marginLeft: 5, 
+    marginRight: 5,
   },
   textInput: {
     height: 40,
     width: '90%',
-    borderColor: '#fff',
-    backgroundColor: '#fff',
+    borderColor: 'black',
+    backgroundColor: 'transparent',
     borderWidth: 1,
     marginTop: 8,
     color: 'black',
-    borderRadius: 5,
+    borderRadius: 10,
+    padding: 5,
+    zIndex: 1,
   },
   signup: {
     height: 35,
