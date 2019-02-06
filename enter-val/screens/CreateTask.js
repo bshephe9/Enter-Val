@@ -1,8 +1,6 @@
 import React from 'react';
 import { ScrollView, View, Button } from 'react-native';
 import { FormLabel, FormInput } from 'react-native-elements';
-import { createTaskAct } from '../redux/store/actions/taskActions'
-import { connect } from 'react-redux';
 
 class CreateTask extends React.Component {
     state = {
@@ -13,8 +11,8 @@ class CreateTask extends React.Component {
     }
 
     submit = () => {
-        this.props.createTaskAct(this.state)
-        // this.setState({ startTime: '', endTime: '', task: '', body: '' });
+        console.log('Console of the state: ', this.state)
+        this.setState({ startTime: '', endTime: '', task: '', body: '' });
     }
     introTime = event => {
         this.setState({ startTime: event });
@@ -59,11 +57,4 @@ class CreateTask extends React.Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        createTaskAct: (task) => dispatch(createTaskAct(task))
-    }
-}
-
-// The first parameter has to be the stateProps that's why the first parameter in this case is null
-export default connect(null, mapDispatchToProps)(CreateTask);
+export default CreateTask;

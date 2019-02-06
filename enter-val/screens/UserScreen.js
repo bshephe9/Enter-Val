@@ -8,13 +8,12 @@ import {
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import CardComp from '../components/Card';
-//connect to the store. Glues redux to react
-import { connect } from 'react-redux';
 
 
 class UserScreen extends React.Component {
   render() {
     const { tasks } = this.props
+    console.log('PROPS HERE: ', this.props);
     return (
 
       <ScrollView style={{ paddingVertical: 20, marginTop: 15 }}>
@@ -61,15 +60,8 @@ class UserScreen extends React.Component {
   }
 }
 
-//map all the states contained in the store (redux). Inside the rootReducer we have task and inside that file is tasks (taskReducer)
-const mapStateToProps = state => {
-  // console.log(state);
-  return {
-    tasks: state.tasks.task
-  }
-}
 
-export default connect(mapStateToProps)(UserScreen);
+export default UserScreen;
 
 
 
