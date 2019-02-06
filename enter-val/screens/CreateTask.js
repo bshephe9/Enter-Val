@@ -11,7 +11,6 @@ class CreateTask extends React.Component {
     }
 
     submit = () => {
-        console.log('Console of the state: ', this.state)
         this.setState({ startTime: '', endTime: '', task: '', body: '' });
     }
     introTime = event => {

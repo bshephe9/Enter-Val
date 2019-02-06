@@ -13,7 +13,6 @@ import CardComp from '../components/Card';
 class UserScreen extends React.Component {
   render() {
     const { tasks } = this.props
-    console.log('PROPS HERE: ', this.props);
     return (
 
       <ScrollView style={{ paddingVertical: 20, marginTop: 15 }}>

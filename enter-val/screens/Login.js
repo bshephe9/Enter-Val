@@ -51,7 +51,7 @@ export default class Login extends React.Component {
           value={this.state.password}
         />
         <TouchableOpacity style={styles.login}
-            onPress={() => this.props.navigation.navigate('Login')}
+            onPress={this.handleLogin}
           >
           <Text style={{ color: '#fff', fontWeight: 'bold', marginTop: 5}}>Login</Text>
           </TouchableOpacity>
