@@ -33,8 +33,6 @@ class UserScreen extends React.Component {
   }
 
   render() {
-    // console.log(this.state);
-    // const { tasks } = this.state;
     return (
       <ScrollView style={{ paddingVertical: 20, marginTop: 15 }}>
 
