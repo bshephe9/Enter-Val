@@ -8,10 +8,6 @@ import {
 import {
     Card
 } from 'react-native-elements';
-import ActionButton from 'react-native-action-button';
-import Icon from 'react-native-vector-icons/Ionicons';
-
-
 
 const CardComp = ({ tasks }) => {
     return (

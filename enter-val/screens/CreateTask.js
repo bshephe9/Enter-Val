@@ -1,8 +1,8 @@
 import React from 'react';
 import { ScrollView, View, Button } from 'react-native';
 import { FormLabel, FormInput } from 'react-native-elements';
-import moment from 'moment';
-
+import { createTaskAct } from '../redux/store/actions/taskActions'
+import { connect } from 'react-redux';
 
 class CreateTask extends React.Component {
     state = {
@@ -13,20 +13,15 @@ class CreateTask extends React.Component {
     }
 
     submit = () => {
-        const timeFormat = moment.unix(this.state.startTime).format('HH:mm');
-        const endTimeFormat = moment.unix(this.state.endTime).format('HH:mm');
-        console.log(` \n Start Time: ${timeFormat} \n End Time: ${endTimeFormat} \n Task Title: ${this.state.task} \n Body: ${this.state.body}`);
-        this.setState({ startTime: '', endTime: '', task: '', body: '' });
-        alert('Task added');
+        this.props.createTaskAct(this.state)
+        // this.setState({ startTime: '', endTime: '', task: '', body: '' });
     }
     introTime = event => {
-        const time = moment(event, 'HH:mm').format('X');
-        this.setState({ startTime: time });
+        this.setState({ startTime: event });
     };
 
     endTime = event => {
-        const time = moment(event, 'HH:mm').format('X');
-        this.setState({ endTime: time });
+        this.setState({ endTime: event });
     };
 
     changeBody = event => {
@@ -42,11 +37,11 @@ class CreateTask extends React.Component {
 
             <ScrollView>
                 <View>
-                    <FormLabel>Start Time (Military time - HH:mm)</FormLabel>
+                    <FormLabel>Start Time</FormLabel>
                     <FormInput onChangeText={this.introTime}></FormInput>
                 </View>
                 <View>
-                    <FormLabel>End Time (Military time - HH:mm)</FormLabel>
+                    <FormLabel>End Time</FormLabel>
                     <FormInput onChangeText={this.endTime}></FormInput>
                 </View>
                 <View>
@@ -64,4 +59,11 @@ class CreateTask extends React.Component {
     }
 }
 
-export default CreateTask;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createTaskAct: (task) => dispatch(createTaskAct(task))
+    }
+}
+
+// The first parameter has to be the stateProps that's why the first parameter in this case is null
+export default connect(null, mapDispatchToProps)(CreateTask);

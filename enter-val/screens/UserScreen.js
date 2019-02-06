@@ -10,6 +10,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import CardComp from '../components/Card';
 //connect to the store. Glues redux to react
 import { connect } from 'react-redux';
+// import { firestoreConnect } from 'react-redux-firebase';
+// import { compose } from 'redux';
 
 class UserScreen extends React.Component {
   render() {
@@ -23,14 +25,14 @@ class UserScreen extends React.Component {
             Today
         </Text>
         </View>
-      
+
         {/* passing the props refered to tasks to the card component */}
-        <CardComp tasks={tasks}/>
+        <CardComp tasks={tasks} />
 
 
         {/* TODO Create a component fort the button */}
         <View>
-          <View style={{ flex: 1, backgroundColor: '#f3f3f3', marginTop: 150 }}>
+          <View style={{ flex: 1, backgroundColor: '#f3f3f3', marginTop: 250 }}>
             {/* Rest of the app comes ABOVE the action button component !*/}
             <ActionButton buttonColor='#1e90ff'>
 
@@ -66,12 +68,25 @@ class UserScreen extends React.Component {
 
 //map all the states contained in the store (redux). Inside the rootReducer we have task and inside that file is tasks (taskReducer)
 const mapStateToProps = state => {
+  console.log(state);
   return {
     tasks: state.task.tasks
   }
 }
 
 export default connect(mapStateToProps)(UserScreen);
+
+
+// export default compose(
+//   connect(mapStateToProps),
+//   // firestoreConnect([
+//   //   { collection: 'tasks' } //when the component is active we are gonna to listen to the tasks collection
+//   // ])
+// )(UserScreen);
+
+
+
+
 
 const styles = StyleSheet.create({
   text: {
