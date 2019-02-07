@@ -17,18 +17,23 @@ class UserScreen extends React.Component {
   }
   componentDidMount() {
     this.connecting();
+    console.log('Example!');
   }
+
 
   connecting() {
     firebase.database().ref().on('child_added', snap => {
-      const tasksArr = [{
+      const tasksArr = {
         startTime: snap.val().startTime,
         endTime: snap.val().endTime,
         task: snap.val().task,
         body: snap.val().body,
         id: snap.val().id
-      }]
-      this.setState({ tasks: tasksArr });
+      }
+      let tasks = [...this.state.tasks]
+      tasks.push(tasksArr)
+      this.setState({ tasks })
+      console.log(this.state.tasks)
     })
   }
 
@@ -46,7 +51,7 @@ class UserScreen extends React.Component {
         {this.state.tasks.map (task => (
              <CardComp {...task} />
         ))}
-     
+
 
         {/* TODO Create a component fort the button */}
         <View>

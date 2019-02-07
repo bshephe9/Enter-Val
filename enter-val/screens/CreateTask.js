@@ -17,7 +17,8 @@ class CreateTask extends React.Component {
         const endTime = this.state.endTime;
         const task = this.state.task;
         const body = this.state.body;
-        const id = this.state.id + 1 ;
+        //Update maybe using the length of the array from array 
+        const id = this.state.id + 1;
         const newTask = {
             startTime: startTime,
             endTime: endTime,
@@ -25,16 +26,22 @@ class CreateTask extends React.Component {
             body: body,
             id: id
         }
-        firebase.database().ref().push(newTask); //pushing to the database
+        this.another(newTask);
+    }
+
+    another = i => {
+        firebase.database().ref().push(i); //pushing to the database
         //Emptying the form 
-        this.setState({   
-        startTime: '',
-        endTime: '',
-        task: '',
-        body: '',
-        id: this.state.id + 1 }); //TODO find how to increase the counter to each card has it own id
+        this.setState({
+            startTime: '',
+            endTime: '',
+            task: '',
+            body: '',
+            id: i.id
+        }); //TODO find how to increase the counter to each card has it own id
         this.props.navigation.navigate('UserScreen')
     }
+
     introTime = event => {
         this.setState({ startTime: event });
     };
