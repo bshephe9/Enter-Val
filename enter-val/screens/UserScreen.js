@@ -32,12 +32,12 @@ class UserScreen extends React.Component {
         endTime: snap.val().endTime,
         task: snap.val().task,
         body: snap.val().body,
-        id: snap.val().id
+        id: snap.getRef().getKey()
       }
       let tasks = [...this.state.tasks]
       tasks.push(tasksArr)
       this.setState({ tasks })
-      // console.log(this.state.tasks)
+      console.log(tasksArr.id);
     })
   }
 
