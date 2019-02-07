@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     Text,
-    View
+    View,
 } from 'react-native';
 import {
     Card
@@ -9,20 +9,25 @@ import {
 
 const CardComp = (props) => {
     return (
-        <Card key={props.id} title='Example'>
+        <Card key={props.id} title=''>
             <View
                 style={{
-                    width: 80,
-                    height: 80,
-                    borderRadius: 40,
-                    marginBottom: 20,
-                    alignSelf: 'center',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                   
                 }}>
-                <Text>{props.startTime} - {props.endTime}</Text>
-                <Text>{props.task}</Text>
-                <Text>{props.body}</Text>
+                <Text
+                    style={{
+                        justifyContent: 'center',
+                        fontWeight:'bold',
+                        fontSize: '17'
+                    }}>
+                    {props.startTime} - {props.endTime}</Text>
+                <Text 
+                style={{
+                    justifyContent: 'center',
+                    marginTop: 5,
+                    fontSize: '15'
+                }}>
+                {props.body}</Text>
             </View>
         </Card>
     )
@@ -30,3 +35,4 @@ const CardComp = (props) => {
 
 
 export default CardComp;
+
