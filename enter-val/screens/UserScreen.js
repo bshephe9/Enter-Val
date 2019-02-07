@@ -59,7 +59,7 @@ class UserScreen extends React.Component {
 
         {/* TODO Create a component fort the button */}
         <View>
-          <View style={{ flex: 1, backgroundColor: '#f3f3f3', position:' fixed', marginTop: 25 }}>
+          <View style={{ flex: 1, backgroundColor: '#f3f3f3', position:' fixed', marginTop: 80 }}>
             {/* Rest of the app comes ABOVE the action button component !*/}
             <ActionButton buttonColor='#00008b'>
 

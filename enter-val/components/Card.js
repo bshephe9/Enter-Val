@@ -10,24 +10,30 @@ import {
 const CardComp = (props) => {
     return (
         <Card key={props.id} title=''>
-            <View
-                style={{
-                   
-                }}>
+            <View>
                 <Text
                     style={{
                         justifyContent: 'center',
-                        fontWeight:'bold',
-                        fontSize: '17'
+                        fontWeight: 'bold',
+                        fontSize: 17
                     }}>
                     {props.startTime} - {props.endTime}</Text>
-                <Text 
-                style={{
-                    justifyContent: 'center',
-                    marginTop: 5,
-                    fontSize: '15'
-                }}>
-                {props.body}</Text>
+                <Text
+                    style={{
+                        justifyContent: 'center',
+                        marginTop: 5,
+                        fontSize: 18,
+                        fontWeight: 'bold',
+                        color: '#008b8b'
+                    }}>
+                    {props.task}</Text>
+                <Text
+                    style={{
+                        justifyContent: 'center',
+                        marginTop: 8,
+                        fontSize: 15
+                    }}>
+                    {props.body}</Text>
             </View>
         </Card>
     )
