@@ -10,7 +10,6 @@ import {
 const CardComp = (props) => {
     return (
         <Card key={props.id} title=''>
-            <View>
                 <Text
                     style={{
                         justifyContent: 'center',
@@ -34,7 +33,6 @@ const CardComp = (props) => {
                         fontSize: 15
                     }}>
                     {props.body}</Text>
-            </View>
         </Card>
     )
 }

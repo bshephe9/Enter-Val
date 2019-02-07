@@ -34,6 +34,7 @@
     "react-navigation": "^3.0.9",
     "react-redux": "^6.0.0",
     "react-redux-firebase": "^3.0.0-alpha.7",
+    "react-test-renderer": "^16.8.1",
     "redux": "^4.0.1",
     "redux-firestore": "^0.6.3",
     "redux-thunk": "^2.3.0",
@@ -42,6 +43,7 @@
   "devDependencies": {
     "@expo/vector-icons": "^9.0.0",
     "babel-preset-expo": "^5.0.0",
+    "jest": "^24.1.0",
     "jest-expo": "^32.0.0"
   },
   "private": true
