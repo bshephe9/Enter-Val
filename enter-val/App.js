@@ -1,41 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import firebase from 'firebase'
 import AppNavigation from './navigation/AppNavigation';
-import rootReducer from './redux/store/reducers/rootReducer';
+// import firebase from './firebase';
+import firebase from 'firebase';
+import config from './config/config';
 
-//Redux
-import { Provider } from 'react-redux';
-// import { store } from './redux/app-redux';
-import {createStore} from 'redux';
+// console.log('Firebase Initialize: ', firebase.INTERNAL)
 
-
-//!! this is the conection to Firebase!
-// Initialize Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyBr5d75r-qEKTaB6C0557OogBoH4TxIy-Q",
-  authDomain: "enter-val.firebaseapp.com",
-  databaseURL: "https://enter-val.firebaseio.com",
-  projectId: "enter-val",
-  storageBucket: "enter-val.appspot.com",
-};
-firebase.initializeApp(firebaseConfig);
+// Initialize firebase instance
+firebase.initializeApp(config)
+console.log('Firebase Initialized!');
 
 
-// Store for redux with the reducer rootReducer
-const store = createStore(rootReducer);
-
-
-//!! this container was created during V3 and is required for the routes to work
-class App extends React.Component {
-  render(){
-    return(
-      <Provider store={store}>
-      <AppNavigation />
-      </Provider>
-    )
-  }
-}
+// Setup react-redux so that connect HOC can be used
+const App = () => (
+    <AppNavigation />
+);
 
 
 //!! it also needs to be exported

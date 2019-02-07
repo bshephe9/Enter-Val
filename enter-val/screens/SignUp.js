@@ -3,11 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, ImageBackground } from 'react-native';
 import firebase from 'firebase';
 
-export default class SignUp extends React.Component {
+
+class SignUp extends React.Component {
   static navigationOptions = {
     header: null,
   };
-  state = { email: '', password: '', errorMessage: null }
+  state = { email: '', password: '' }
   handleSignUp = () => {
     firebase
       .auth()
@@ -15,6 +16,8 @@ export default class SignUp extends React.Component {
         this.state.password)
       .then(() => this.props.navigation.navigate('UserScreen'))
       .catch(error => this.setState({ errorMessage: error.message }))
+    this.props.navigation.navigate('UserScreen')
+
   }
   render() {
     return (
@@ -51,18 +54,21 @@ export default class SignUp extends React.Component {
             value={this.state.password}
           />
           <TouchableOpacity style={styles.signup} onPress={this.handleSignUp}>
-          <Text style={{ color: '#fff', fontWeight: 'bold', marginTop: 5}}>Sign Up</Text>
+            <Text style={{ color: '#fff', fontWeight: 'bold', marginTop: 5 }}>Sign Up</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.login}
             onPress={() => this.props.navigation.navigate('Login')}
           >
-          <Text style={{ color: '#fff', fontWeight: 'bold', marginTop: 5}}>Login</Text>
+            <Text style={{ color: '#fff', fontWeight: 'bold', marginTop: 5 }}>Login</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground >
     )
   }
 }
+
+export default SignUp;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
