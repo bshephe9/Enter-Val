@@ -1,0 +1,773 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App test against snapshot 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    enabled={false}
+    hitSlop={
+      Object {
+        "right": 50,
+      }
+    }
+    maxDeltaY={20}
+    minOffsetX={5}
+    onGestureEvent={[Function]}
+    onHandlerStateChange={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#eee",
+          "flex": 1,
+          "flexDirection": "column-reverse",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          pointerEvents="auto"
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            accessibilityElementsHidden={false}
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
+                Object {
+                  "flex": 1,
+                  "resizeMode": "cover",
+                }
+              }
+            >
+              <Image
+                source={1}
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": undefined,
+                      "width": undefined,
+                    },
+                    undefined,
+                  ]
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "color": "black",
+                    "marginTop": 25,
+                  }
+                }
+              >
+                <View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontSize": 25,
+                        "marginBottom": 6,
+                        "marginTop": 30,
+                      }
+                    }
+                  />
+                </View>
+                <View>
+                  <Text
+                    style={
+                      Object {
+                        "borderColor": "#fff",
+                        "borderWidth": 2,
+                        "color": "#fff",
+                        "fontSize": 35,
+                        "fontWeight": "bold",
+                        "padding": 20,
+                        "paddingLeft": 40,
+                        "paddingRight": 40,
+                      }
+                    }
+                  >
+                    enterVal
+                  </Text>
+                </View>
+                <View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontSize": 25,
+                        "marginBottom": 6,
+                        "marginTop": 30,
+                      }
+                    }
+                  />
+                </View>
+                <View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontSize": 25,
+                        "marginBottom": 6,
+                        "marginTop": 30,
+                      }
+                    }
+                  >
+                    0
+                    º
+                  </Text>
+                </View>
+                <View>
+                  <View
+                    accessible={true}
+                    isTVSelectable={true}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#007aff",
+                            "fontSize": 17,
+                            "fontWeight": "500",
+                            "textAlign": "center",
+                          },
+                          null,
+                          Object {
+                            "backgroundColor": "#e9967a",
+                            "borderColor": "#fa8072",
+                            "borderRadius": 5,
+                            "color": "#fff",
+                            "fontSize": 20,
+                            "marginTop": 300,
+                            "overflow": "hidden",
+                            "padding": 4,
+                            "paddingLeft": 20,
+                            "paddingRight": 20,
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      get started
+                    </Text>
+                  </View>
+                </View>
+                <View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontSize": 18,
+                        "fontStyle": "italic",
+                        "marginTop": 190,
+                      }
+                    }
+                  >
+                    "Keep going. Be all in."
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        pointerEvents="box-none"
+        style={
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#FFF",
+              "transform": Array [
+                Object {
+                  "translateX": -750,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            onLayout={[Function]}
+            pointerEvents="box-none"
+            style={
+              Object {
+                "backgroundColor": "#FFF",
+                "borderBottomColor": "#A7A7AA",
+                "borderBottomWidth": 0.5,
+                "height": 64,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Home Screen test against snapshot 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "flex": 1,
+      "resizeMode": "cover",
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "color": "black",
+        "marginTop": 25,
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 25,
+            "marginBottom": 6,
+            "marginTop": 30,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "borderColor": "#fff",
+            "borderWidth": 2,
+            "color": "#fff",
+            "fontSize": 35,
+            "fontWeight": "bold",
+            "padding": 20,
+            "paddingLeft": 40,
+            "paddingRight": 40,
+          }
+        }
+      >
+        enterVal
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 25,
+            "marginBottom": 6,
+            "marginTop": 30,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 25,
+            "marginBottom": 6,
+            "marginTop": 30,
+          }
+        }
+      >
+        0
+        º
+      </Text>
+    </View>
+    <View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#007aff",
+                "fontSize": 17,
+                "fontWeight": "500",
+                "textAlign": "center",
+              },
+              null,
+              Object {
+                "backgroundColor": "#e9967a",
+                "borderColor": "#fa8072",
+                "borderRadius": 5,
+                "color": "#fff",
+                "fontSize": 20,
+                "marginTop": 300,
+                "overflow": "hidden",
+                "padding": 4,
+                "paddingLeft": 20,
+                "paddingRight": 20,
+              },
+              null,
+            ]
+          }
+        >
+          get started
+        </Text>
+      </View>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 18,
+            "fontStyle": "italic",
+            "marginTop": 190,
+          }
+        }
+      >
+        "Keep going. Be all in."
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Login test against snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text>
+    Login
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    autoCapitalize="none"
+    onChangeText={[Function]}
+    placeholder="Email"
+    style={
+      Object {
+        "borderColor": "gray",
+        "borderWidth": 1,
+        "height": 40,
+        "marginTop": 8,
+        "width": "90%",
+      }
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <TextInput
+    allowFontScaling={true}
+    autoCapitalize="none"
+    onChangeText={[Function]}
+    placeholder="Password"
+    secureTextEntry={true}
+    style={
+      Object {
+        "borderColor": "gray",
+        "borderWidth": 1,
+        "height": 40,
+        "marginTop": 8,
+        "width": "90%",
+      }
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <View
+    accessibilityRole="button"
+    accessibilityStates={Array []}
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "padding": 8,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Login
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityRole="button"
+    accessibilityStates={Array []}
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "padding": 8,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Don't have an account? Sign Up
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Settings test against snapshot 1`] = `
+<View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#007aff",
+            "fontSize": 17,
+            "fontWeight": "500",
+            "textAlign": "center",
+          },
+          null,
+          Object {
+            "backgroundColor": "#fa8072",
+            "borderColor": "#fa8072",
+            "borderRadius": 5,
+            "color": "#fff",
+            "fontSize": 20,
+            "marginLeft": 100,
+            "marginRight": 100,
+            "marginTop": 700,
+            "overflow": "hidden",
+            "padding": 4,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+          },
+          null,
+        ]
+      }
+    >
+      Log in
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Sign up test against snapshot 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "flex": 1,
+      "resizeMode": "cover",
+    }
+  }
+>
+  <Image
+    blurRadius={5}
+    source={1}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderRadius": 5,
+        "color": "#fff",
+        "flex": 1,
+        "marginTop": 200,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 30,
+          "fontWeight": "bold",
+          "marginBottom": 20,
+        }
+      }
+    >
+      Get Started with EnterVal
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      autoCapitalize="none"
+      onChangeText={[Function]}
+      placeholder="Email"
+      placeholderTextColor="black"
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderColor": "#fff",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "color": "black",
+          "height": 40,
+          "marginTop": 8,
+          "width": "90%",
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <TextInput
+      allowFontScaling={true}
+      autoCapitalize="none"
+      onChangeText={[Function]}
+      placeholder="Password"
+      placeholderTextColor="black"
+      secureTextEntry={true}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderColor": "#fff",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "color": "black",
+          "height": 40,
+          "marginTop": 8,
+          "width": "90%",
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e9967a",
+          "borderColor": "#e9967a",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "height": 35,
+          "marginTop": 8,
+          "opacity": 1,
+          "width": "35%",
+        }
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e9967a",
+          "borderColor": "#e9967a",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "color": "#fff",
+          "height": 35,
+          "marginTop": 8,
+          "opacity": 1,
+          "width": "35%",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Tasks Page test against snapshot 1`] = `null`;
+
+exports[`User Screen test against snapshot 1`] = `null`;

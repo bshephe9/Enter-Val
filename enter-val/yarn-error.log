@@ -1,0 +1,78 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add jest-expo --dev
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\User\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Program Files\heroku\bin;C:\Users\User\AppData\Roaming\npm;C:\Exercism;C:\Program Files\MongoDB\Server\4.0\bin
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  8.11.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@material-ui/icons/-/icons-3.0.2.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\User\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:129645:19)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:106:13)
+      at ClientRequest.emit (events.js:208:7)
+      at TLSSocket.emitTimeout (_http_client.js:706:34)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:106:13)
+      at TLSSocket.emit (events.js:208:7)
+      at TLSSocket.Socket._onTimeout (net.js:410:8)
+      at ontimeout (timers.js:498:11)
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "eject": "expo eject",
+      "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    },
+    "jest": {
+      "preset": "jest-expo"
+    },
+    "dependencies": {
+      "@expo/samples": "2.1.1",
+      "@material-ui/core": "^3.9.1",
+      "@material-ui/icons": "^3.0.2",
+      "add": "^2.0.6",
+      "expo": "^32.0.0",
+      "firebase": "^5.8.2",
+      "install": "^0.12.2",
+      "moment": "^2.24.0",
+      "npm": "^6.7.0",
+      "react": "16.5.0",
+      "react-dom": "^16.7.0",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+      "react-native-action-button": "^2.8.5",
+      "react-native-blur": "^3.2.2",
+      "react-native-button": "^2.3.0",
+      "react-native-elements": "^0.19.1",
+      "react-native-firebase": "^5.2.1",
+      "react-native-floating-action": "^1.14.1",
+      "react-native-material-ui": "^1.30.1",
+      "react-native-vector-icons": "^6.2.0",
+      "react-navigation": "^3.0.9",
+      "yarn": "^1.13.0"
+    },
+    "devDependencies": {
+      "@expo/vector-icons": "^9.0.0",
+      "babel-preset-expo": "^5.0.0",
+      "jest-expo": "^32.0.0"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
