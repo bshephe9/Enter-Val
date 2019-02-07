@@ -24,7 +24,7 @@ class CreateTask extends React.Component {
             endTime: endTime,
             task: task,
             body: body,
-            id: id
+            // id: id
         }
         this.another(newTask);
     }
@@ -36,8 +36,7 @@ class CreateTask extends React.Component {
             startTime: '',
             endTime: '',
             task: '',
-            body: '',
-            id: i.id
+            body: ''
         }); //TODO find how to increase the counter to each card has it own id
         this.props.navigation.navigate('UserScreen')
     }
