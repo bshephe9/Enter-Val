@@ -17,9 +17,13 @@ class UserScreen extends React.Component {
   }
   componentDidMount() {
     this.connecting();
-    console.log('Example!');
+    console.log('EXAMPLE!');
   }
 
+  // componentDidUpdate(){
+  //   this.connecting();
+  //   console.log('HEY THERE ')
+  // }
 
   connecting() {
     firebase.database().ref().on('child_added', snap => {
@@ -33,7 +37,7 @@ class UserScreen extends React.Component {
       let tasks = [...this.state.tasks]
       tasks.push(tasksArr)
       this.setState({ tasks })
-      console.log(this.state.tasks)
+      // console.log(this.state.tasks)
     })
   }
 
