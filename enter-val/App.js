@@ -1,26 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {
-  createStackNavigator,
-  createAppContainer,
-} from 'react-navigation'
+import AppNavigation from './navigation/AppNavigation';
+// import firebase from './firebase';
+import firebase from 'firebase';
+import config from './config/config';
 
-//!! this is where we import new "screens"
-import HomeScreen from './screens/HomeScreen';
-import SettingsScreen from './screens/SettingsScreen'
-import UserScreen from './screens/UserScreen';
+// console.log('Firebase Initialize: ', firebase.INTERNAL)
 
-
-//!! this renders new screens for them to be used in the app
-const AppNavigator = createStackNavigator({
-  HomeScreen: { screen: HomeScreen },
-  SettingsScreen: { screen: SettingsScreen },
-  UserScreen: { screen: UserScreen }
-});
+// Initialize firebase instance
+firebase.initializeApp(config)
+console.log('Firebase Initialized!');
 
 
-//!! this container was created during V3 and is required for the routes to work
-const App = createAppContainer(AppNavigator);
+// Setup react-redux so that connect HOC can be used
+const App = () => (
+    <AppNavigation />
+);
 
 
 //!! it also needs to be exported
