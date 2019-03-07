@@ -52,4 +52,7 @@ Screen Shots of the App:
 
 <img width="305" alt="screen shot 2019-03-06 at 3 37 55 pm" src="https://user-images.githubusercontent.com/37412308/53961476-aea84680-40b6-11e9-8c63-4609cc161033.png">
 
+<img width="292" alt="screen shot 2019-03-06 at 3 38 30 pm" src="https://user-images.githubusercontent.com/37412308/53961617-05158500-40b7-11e9-8546-0c2035444da7.png">
+
+
 
