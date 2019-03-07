@@ -47,3 +47,9 @@ Database with [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb
 Authentication with [Auto0](https://auth0.com/)  
 ## Want to Contribute?
 Let us know if you want to contribute and please star and fork if this project interests you!
+-- 
+Screen Shots of the App: 
+
+<img width="305" alt="screen shot 2019-03-06 at 3 37 55 pm" src="https://user-images.githubusercontent.com/37412308/53961476-aea84680-40b6-11e9-8c63-4609cc161033.png">
+
+
